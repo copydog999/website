@@ -15,7 +15,7 @@ def create_deploy_zip():
     current_script_path = Path(__file__).relative_to(project_dir)
 
     # 需要排除的文件夹(系统和版本控制)
-    excluded_folders = {'.idea', '.git', 'dev', 'articles', 'System Volume Information','$RECYCLE.BIN','dev_guidelines.md'}
+    excluded_folders = {'.idea', '.git', 'dev', 'articles', 'System Volume Information','$RECYCLE.BIN','dev_guidelines.md','.gitignore','token'}
 
     # 输出文件路径（在项目根目录）
     zip_path = project_dir / 'deploy.zip'
