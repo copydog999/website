@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NowBase 论文详情</title>
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/nowbase.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="script/utils.js"></script>
+</head>
+<body>
+  <header>
+    <h1>NowBase论文检索服务</h1>
+    <p>NowBase Document Indexing Service</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="releases.html">期刊阅览</a></li>
+      <li><a href="nowbase.html">NowBase 检索</a></li>
+      <li><a href="stat.html">游戏迷因子</a></li>
+      <li><a href="notifications.html">通知公告</a></li>
+      <li><a href="infos.html">监督平台</a></li>
+      <li><a href="opensource.html">开源</a></li>
+      <li><a href="bestpaper.html">最佳论文奖</a></li>
+      <li><a href="editorial.html">编辑委员会</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div id="loading" class="loading">加载中...</div>
+    <div id="error" class="error" style="display: none;">未找到对应的论文</div>
+    <div id="content" style="display: none;">
+      <div class="paper-info" style="position: relative;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+          <div class="paper-header-left">
+            <div class="paper-doi">Nowbase DOI: <span id="doi"></span></div>
+            <h2 id="title" class="paper-title"></h2>
+          </div>
+          <div id="citationButtonContainer" style="margin-left: 20px;"></div>
+        </div>
+        <div id="authors" class="paper-authors"></div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <div id="levelContainer">
+            <div id="level" class="paper-level" style="display: none;"></div>
+          </div>
+          <a id="downloadPdfBtn" class="paper-level-btn" style="display: none; text-decoration: none; background-color: #ff0000; color: white; padding: 4px 8px; border-radius: 4px;" href="#" target="_blank">
+            📄 下载PDF
+          </a>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <div id="issue" class="paper-issue"></div>
+          <div id="doiInfo" class="paper-doi-info"></div>
+        </div>
+        <div id="keywords" class="paper-keywords"></div>
+        <div id="specialNote" class="special-note" style="display: none;"></div>
+        <div id="abstract" class="paper-abstract"></div>
+        
+        <!-- 附件标题 -->
+        <h2 id="exfileTitle" style="display: none; margin-top: 30px; margin-bottom: 15px; color: #333;">附件</h2>
+        
+        <!-- Exfile作者说明 -->
+        <div id="exfann" class="exfile-annotation" style="display: none; margin-bottom: 15px; padding: 10px; background-color: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px; font-size: 14px; color: #856404;"></div>
+        
+        <!-- Exfile 声明 -->
+        <div id="exfileDeclaration" class="exfile-declaration" style="display: none; margin-bottom: 15px; padding: 10px; background-color: #f0f8ff; border-left: 4px solid #4CAF50; border-radius: 4px; font-size: 14px; color: #333;">
+          💡 此内容由作者提供
+        </div>
+        
+        <!-- Exfile内容容器 -->
+        <div id="exfileContainer" style="margin-top: 15px; display: none;">
+          <!-- 动态插入媒体内容 -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- 数据库表格视图，当没有 DOI 参数时显示 -->
+    <div id="listView" style="display: none;">
+      <div class="paper-info">
+        <h2 id="introTitle" class="paper-title">NowBase 论文检索服务</h2>
+        <div id="introAuthors" class="paper-authors">作者: EigenLife 机器视觉实验室</div>
+        <div id="introIssue" class="paper-issue">期刊: 电子游戏科学与技术</div>
+        <div id="introKeywords" class="paper-keywords">关键词: 论文检索, DOI服务, 学术数据库, 文档索引</div>
+        <div id="introAbstract" class="paper-abstract">NowBase Document Indexing Service 是一个专业的学术论文检索与索引服务系统。该系统为《电子游戏科学与技术》期刊提供完整的论文管理、DOI分配与检索功能。通过NowBase，用户可以快速检索期刊中的论文，访问论文详细信息，以及获取PDF文档。系统支持通过DOI编号直接访问特定论文，并提供高级搜索功能，以满足学术研究和文献管理的需求。</div>
+      </div>
+      
+      <h2>数据库</h2>
+      
+      <!-- 搜索区域 -->
+      <div id="searchArea" class="search-area">
+        <div class="search-mode-selector">
+          <label for="searchMode">检索模式：</label>
+          <select id="searchMode" onchange="toggleSearchMode()">
+            <option value="simple">普通检索</option>
+            <option value="advanced">高级检索</option>
+          </select>
+        </div>
+        
+        <!-- 普通检索 -->
+        <div id="simpleSearch" class="simple-search-container">
+          <input type="text" id="simpleSearchInput" placeholder="输入论文标题进行模糊检索..." onkeyup="handleSimpleSearch(event)">
+          <button onclick="performSimpleSearch()" class="search-btn">搜索</button>
+          <button onclick="clearSearch()" class="clear-btn">清除</button>
+        </div>
+        
+        <!-- 高级检索 -->
+        <div id="advancedSearch" class="search-form" style="display: none;">
+          <div class="advanced-search-row">
+            <label>作者：</label>
+            <input type="text" id="advAuthorInput" placeholder="作者姓名" onkeyup="handleAdvancedSearchEnter(event)">
+          </div>
+          <div class="advanced-search-row">
+            <label>论文标题：</label>
+            <input type="text" id="advTitleInput" placeholder="论文标题（支持模糊匹配）" onkeyup="handleAdvancedSearchEnter(event)">
+          </div>
+          <div class="advanced-keywords-row">
+            <label>关键词：</label>
+            <input type="text" id="advKeywordInput" placeholder="多个关键词请用中文或英文分号隔开，如：游戏;AI;机器学习" onkeyup="handleAdvancedSearchEnter(event)">
+          </div>
+          <div class="advanced-search-row">
+            <label>摘要内容：</label>
+            <input type="text" id="advAbstractInput" placeholder="摘要内容（支持模糊匹配）" onkeyup="handleAdvancedSearchEnter(event)">
+          </div>
+          <div class="advanced-search-buttons">
+            <button onclick="performAdvancedSearch()" class="search-btn">搜索</button>
+            <button onclick="clearAdvancedSearch()" class="clear-btn">清除</button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="papersContainer" class="papers-container">
+        <!-- 数据库表格将通过JavaScript动态加载 -->
+      </div>
+      <div id="pagination" class="pagination">
+        <!-- 分页控件将通过JavaScript动态加载 -->
+      </div>
+      
+      <h2>Nowledge Community学术合作知识图谱</h2>
+      NowGraph系统是Nowledge Community开发的一款基于图数据库的<b>学术合作可视化系统</b>，用于展示各学术主体（主要为作者）之间的合作关系。通过NowGraph系统，您可以方便、直观地查看各作者之间通过合作建立的连接，从而快速把握本领域研究者的基本信息。
+      <div style="text-align: center; margin: 20px 0;">
+        <a href="database/nowgraph.html" class="cta-button2">前往NowGraph系统</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="margin-bottom: 15px;">
+        <a href="https://www.zhihu.com/people/itaru-otaku" target="_blank" style="margin: 0 15px; color: #FFCC00; text-decoration: none;">知乎</a>
+        <span style="color: #666;">|</span>
+        <a href="https://space.bilibili.com/1966350265" target="_blank" style="margin: 0 15px; color: #FFCC00; text-decoration: none;">哔哩哔哩</a>
+      </div>
+      <div style="color: #CCC; font-size: 14px; margin-bottom: 8px;">
+        地址：吉林省吉林市船营区长春路169号东北电力大学
+      </div>
+      <div style="color: #CCC; font-size: 14px; margin-bottom: 8px;">
+        主办单位：EigenLife机器视觉实验室
+      </div>
+      <div style="color: #999; font-size: 12px; margin-top: 15px; padding-top: 10px; border-top: 1px solid #333;">
+        &copy; 2025 电子游戏科学与技术
+      </div>
+    </div>
+  </footer>
+
+  <script src="script/nowbase.js"></script>
+</body>
+</html>

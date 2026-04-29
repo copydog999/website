@@ -1,0 +1,137 @@
+.notice-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    border-left: 3px solid #00629B;
+}
+
+.notice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.notice-content {
+    padding: 15px;
+    color: #333;
+    background-color: #fafafa;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.expand-btn {
+    background: #00629B;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.expand-btn:hover {
+    background: #004470;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 搜索框样式 */
+.search-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-box {
+    width: 60%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #00629B;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: 'Arial', sans-serif;
+}
+
+.search-box:focus {
+    border-color: #D36A00;
+    box-shadow: 0 4px 10px rgba(211, 106, 0, 0.2);
+}
+
+/* IEEE-style notification list */
+.notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-item {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #D36A00;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notification-title {
+    font-weight: bold;
+    color: #003C6B;
+    font-size: 1.1em;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-date {
+    color: #666;
+    font-size: 0.9em;
+    padding: 5px 10px;
+}
+
+.notification-body {
+    padding: 15px;
+    color: #444;
+}
+
+/* 搜索结果样式 */
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+}
+
+/* 查看全部按钮样式 */
+.load-more-btn {
+    display: inline-block;
+    background-color: #D36A00;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.load-more-btn:hover {
+    background-color: #b05800;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑部成员 - 电子游戏科学与技术</title>
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="style/editor.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <!-- 页面标题区域 -->
+            <div class="section-title">
+                <a href="../editorial.html" class="back-button">&larr; 返回</a>
+                <h2>编辑委员会</h2>
+            </div>
+
+            <!-- 加载状态/错误提示容器 -->
+            <div id="loadingIndicator" class="loading-state" aria-live="polite">正在加载成员数据...</div>
+
+            <!-- 作者卡片将动态渲染在此处 -->
+            <div class="author-grid" id="authorGrid"></div>
+
+            <!-- 调试信息（仅开发辅助，可移除） -->
+            <div class="debug-info" id="debugInfo"></div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <hr class="footer-hr">
+        </div>
+    </footer>
+
+    <!-- JavaScript文件 -->
+    <script src="script/editor.js"></script>
+</body>
+</html>

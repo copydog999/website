@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>游戏迷因子 - 电子游戏科学与技术</title>
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/stat.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="script/utils.js"></script>
+</head>
+<body>
+  <header>
+    <h1>NowBase学术计量服务</h1>
+    <p>NowBase Academic Metrics Service</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="releases.html">期刊阅览</a></li>
+      <li><a href="nowbase.html">NowBase 检索</a></li>
+      <li><a href="stat.html">游戏迷因子</a></li>
+      <li><a href="notifications.html">通知公告</a></li>
+      <li><a href="infos.html">监督平台</a></li>
+      <li><a href="opensource.html">开源</a></li>
+      <li><a href="bestpaper.html">最佳论文奖</a></li>
+      <li><a href="editorial.html">编辑委员会</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- 页面标题区域 -->
+    <div class="section-title">
+      <h2>查询您的“游戏迷因子” <a href="?explain" class="help-icon-inline" title="查看游戏迷因子说明">?</a><a href="editorial.html" class="back-button-inline" id="backButton" style="display: none;">&larr; 返回</a></h2>
+    </div>
+
+    <!-- 加载状态/错误提示容器 -->
+    <div id="loadingIndicator" class="loading-state" aria-live="polite">正在加载数据...</div>
+
+    <!-- 作者搜索框 -->
+    <div class="search-container" id="searchContainer" style="display: none;">
+      <div class="search-box">
+        <label for="authorSearch">搜索作者：</label>
+        <input type="text" id="authorSearch" placeholder="输入作者姓名..." autocomplete="off">
+        <div id="authorSuggestions" class="suggestions-list"></div>
+      </div>
+    </div>
+
+    <!-- 游戏迷因子说明 -->
+    <div class="gameme-explanation" id="gamemeExplanation" style="display: none;">
+      <h3>什么是游戏迷因子？</h3>
+      <p class="explanation-intro">游戏迷因子（Gameme Factor）是《电子游戏科学与技术》期刊独创的学术贡献评价指标，旨在全面、客观地量化作者在电子游戏研究领域的综合影响力。</p>
+                  
+      <div class="formula-section">
+        <h4>计算公式</h4>
+        <div class="formula-display">
+          <code>G_raw = Σ [ r^(k-1) × (1 + 0.92 × award) × (1 + 0.05 × domain_diversity) × (1 + 0.02 × log(fulltext_length)) ]</code><br>
+          <code>G = ln(1 + G_raw) × 10</code>
+        </div>
+        <p class="formula-note">其中：r = 0.7（衰减系数），k 为作者顺位，award 为获奖标志（获奖=1，未获奖=0），domain_diversity 为领域差异度，fulltext_length 为全文字数</p>
+      </div>
+    
+      <div class="scoring-section">
+        <h4>评分范围</h4>
+        <p>游戏迷因子经过科学的归一化处理，最终得分范围为 <strong>0-10分</strong>。分数越高，代表该作者在电子游戏科学与技术领域的综合贡献越突出。</p>
+      </div>
+    
+      <div class="significance-section">
+        <h4>设计理论与统计指标</h4>
+        <p>关于“游戏迷因子”的设计理论、统计指标，以论文<a href="https://journalofest.netlify.app/nowbase.html?doi=BS-3-1-2026-R">《游戏迷因子(Gameme Factor)：基于指数衰减的作者贡献度评价模型》</a>（基础科学版，第三卷）的形式发表。</p>
+      </div>
+    </div>
+
+    <!-- 作者信息展示 -->
+    <div class="author-result" id="authorResult" style="display: none;">
+      <div class="author-header-info">
+        <h3 id="resultAuthorName"></h3>
+        <div class="gameme-factor-display">
+          <span class="factor-label">Gameme Factor:</span>
+          <span class="factor-value" id="resultGamemeFactor"></span>
+        </div>
+        <div class="paper-count-display">
+          <span class="count-label">发表论文数:</span>
+          <span class="count-value" id="resultPaperCount"></span>
+        </div>
+      </div>
+      
+      <div class="papers-section">
+        <h4>发表论文列表</h4>
+        <ul class="papers-list" id="resultPapersList">
+          <!-- 论文列表将通过 JavaScript 动态加载 -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Gameme Factor 分布图 -->
+    <div class="distribution-chart" id="distributionChart" style="display: none;">
+      <h3>Gameme Factor 分布</h3>
+      <canvas id="gamemeCanvas"></canvas>
+      
+      <!-- 统计指标 -->
+      <div class="statistics-summary" id="statisticsSummary" style="display: none;">
+        <div class="stat-item" title="参与统计的作者总数">
+          <span class="stat-label">作者总数</span>
+          <span class="stat-value" id="statTotalAuthors">-</span>
+        </div>
+        <div class="stat-item" title="所有 Gameme Factor 的算术平均值">
+          <span class="stat-label">平均值</span>
+          <span class="stat-value" id="statMean">-</span>
+        </div>
+        <div class="stat-item" title="将所有值排序后位于中间的数值">
+          <span class="stat-label">中位数</span>
+          <span class="stat-value" id="statMedian">-</span>
+        </div>
+        <div class="stat-item" title="数据偏离平均值的程度，越大表示越分散">
+          <span class="stat-label">标准差</span>
+          <span class="stat-value" id="statStdDev">-</span>
+        </div>
+        <div class="stat-item" title="最小的 Gameme Factor 值">
+          <span class="stat-label">最小值</span>
+          <span class="stat-value" id="statMin">-</span>
+        </div>
+        <div class="stat-item" title="最大的 Gameme Factor 值">
+          <span class="stat-label">最大值</span>
+          <span class="stat-value" id="statMax">-</span>
+        </div>
+        <div class="stat-item" title="25%分位数，即25%的数据小于此值">
+          <span class="stat-label">Q1 (25%)</span>
+          <span class="stat-value" id="statQ1">-</span>
+        </div>
+        <div class="stat-item" title="75%分位数，即75%的数据小于此值">
+          <span class="stat-label">Q3 (75%)</span>
+          <span class="stat-value" id="statQ3">-</span>
+        </div>
+        <div class="stat-item" title="第三四分位数与第一四分位数之差，反映中间50%数据的离散程度">
+          <span class="stat-label">四分位距 (IQR)</span>
+          <span class="stat-value" id="statIQR">-</span>
+        </div>
+        <div class="stat-item" title="最大值与最小值之差">
+          <span class="stat-label">极差</span>
+          <span class="stat-value" id="statRange">-</span>
+        </div>
+        <div class="stat-item" title="标准差与平均值的比值，反映相对离散程度">
+          <span class="stat-label">变异系数 (CV)</span>
+          <span class="stat-value" id="statCV">-</span>
+        </div>
+        <div class="stat-item" title="分布的对称性：>0右偏，<0左偏，=0对称">
+          <span class="stat-label">偏度</span>
+          <span class="stat-value" id="statSkewness">-</span>
+        </div>
+        <div class="stat-item" title="分布的尖锐程度：>0尖峰，<0平峰，=0正态">
+          <span class="stat-label">峰度</span>
+          <span class="stat-value" id="statKurtosis">-</span>
+        </div>
+        <div class="stat-item" title="K-S检验统计量，衡量数据与正态分布的最大偏差">
+          <span class="stat-label">K-S 统计量</span>
+          <span class="stat-value" id="statKSStat">-</span>
+        </div>
+        <div class="stat-item" title="K-S检验p值，>0.05表示不能拒绝正态分布假设">
+          <span class="stat-label">K-S p值</span>
+          <span class="stat-value" id="statKSPValue">-</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 统计控制面板（仅管理员可见） -->
+    <div class="stats-controls" id="statsControls" style="display: none;">
+      <div class="control-group">
+        <label for="metricSelect">选择指标：</label>
+        <select id="metricSelect">
+          <option value="gamemeFactor">Gameme Factor（游戏迷因子）</option>
+          <option value="paperCount">发表论文数量</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <label for="sortOrder">排序方式：</label>
+        <select id="sortOrder">
+          <option value="desc">降序</option>
+          <option value="asc">升序</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 作者统计表格（仅管理员可见） -->
+    <div class="stats-table-container" id="statsTableContainer" style="display: none;">
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>作者</th>
+            <th>发表论文数</th>
+            <th>Gameme Factor</th>
+            <th>查看详情</th>
+          </tr>
+        </thead>
+        <tbody id="statsTableBody">
+          <!-- 数据将通过 JavaScript 动态加载 -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 调试信息（仅开发辅助，可移除） -->
+    <div class="debug-info" id="debugInfo"></div>
+  </div>
+
+  <footer>
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="margin-bottom: 15px;">
+        <a href="https://www.zhihu.com/people/itaru-otaku" target="_blank" style="margin: 0 15px; color: #FFCC00; text-decoration: none;">知乎</a>
+        <span style="color: #666;">|</span>
+        <a href="https://space.bilibili.com/1966350265" target="_blank" style="margin: 0 15px; color: #FFCC00; text-decoration: none;">哔哩哔哩</a>
+      </div>
+      <div style="color: #CCC; font-size: 14px; margin-bottom: 8px;">
+        地址：吉林省吉林市船营区长春路169号东北电力大学
+      </div>
+      <div style="color: #CCC; font-size: 14px; margin-bottom: 8px;">
+        主办单位：EigenLife机器视觉实验室
+      </div>
+      <div style="color: #999; font-size: 12px; margin-top: 15px; padding-top: 10px; border-top: 1px solid #333;">
+        &copy; 2025 电子游戏科学与技术
+      </div>
+    </div>
+  </footer>
+
+  <script src="script/stat.js"></script>
+</body>
+</html>

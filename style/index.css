@@ -1,0 +1,281 @@
+.core-principles-colored {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.principle-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    padding: 25px 20px;
+    border-radius: 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #00629B 0%, #003C6B 100%);
+}
+
+/* 卡片主题色配置 - IEEE style */
+.principle-card[data-theme="integrity"] {
+    background: linear-gradient(135deg, #007CBA 0%, #005F8F 100%);
+}
+
+.principle-card[data-theme="fairness"] {
+    background: linear-gradient(135deg, #00A08F 0%, #007A6F 100%);
+}
+
+.principle-card[data-theme="innovation"] {
+    background: linear-gradient(135deg, #D36A00 0%, #A85500 100%);
+}
+
+.principle-card[data-theme="rigor"] {
+    background: linear-gradient(135deg, #008C45 0%, #006A35 100%);
+}
+
+/* 悬停效果 */
+.principle-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 内容样式 */
+.card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin: 0 0 12px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.95;
+}
+
+.card-desc span {
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .principle-card {
+        min-width: 100%;
+        margin-bottom: 20px;
+        padding: 20px 15px;
+    }
+}
+
+.warning-badge {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #FF6B00;
+    /* IEEE orange */
+    border-radius: 0;
+    /* Square for IEEE style */
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 10px rgba(211, 106, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    margin: 10px 5px;
+}
+
+/* 可选的内光效果 */
+.warning-badge::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #FF6B00;
+    border-radius: 0;
+    opacity: 0.3;
+}
+
+.cta-buttonreport {
+    display: inline-block;
+    background-color: #8B0000;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 5px;
+    transition: all 0.3s;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cta-buttonreport:hover {
+    background-color: #6B0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 标签页样式 */
+.research-tabs {
+    margin-top: 20px;
+}
+
+.tab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.tab-button {
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button:hover {
+    background-color: #d0d0d0;
+}
+
+.tab-button.active {
+    background-color: #00629B;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #00629B;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h3 {
+    margin-top: 0;
+    color: #00629B;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.tab-content ul {
+    padding-left: 20px;
+}
+
+.tab-content li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .tab-buttons {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        width: 100%;
+    }
+}
+
+/* 投稿表单样式 */
+.submission-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #003C6B;
+}
+
+.form-input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #00629B;
+    box-shadow: 0 0 5px rgba(0, 98, 155, 0.3);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    background-color: #f9f9f9;
+}
+
+.form-actions {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.form-note {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #D36A00;
+}
+
+.form-note p {
+    margin: 5px 0;
+}
+
+/* 投稿表单头部 */
+.submission-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.submission-header h2 {
+    margin: 0;
+}

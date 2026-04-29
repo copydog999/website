@@ -1,0 +1,181 @@
+/* 期刊阅览页面样式 */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.search-box {
+    width: 60%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #733eee;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.result-count {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 16px;
+    color: #666;
+    font-weight: bold;
+    vertical-align: middle;
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 15px;
+    border: 1px solid #dee2e6;
+}
+
+.paper-section {
+    margin-bottom: 30px;
+}
+
+.issue-header {
+    user-select: none;
+    border-radius: 4px;
+}
+
+.issue-header:hover {
+    background-color: #e8e8e8 !important;
+    box-shadow: 0 2px 8px rgba(115, 62, 238, 0.1);
+}
+
+.expand-icon {
+    color: #733eee;
+    font-weight: bold;
+}
+
+.paper-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.paper-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.paper-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.open-access-badge {
+    display: inline-block;
+    border: 1.4px solid #ff0000;
+    color: #ff0000;
+    padding: 0.7px 4.2px;
+    border-radius: 8.4px;
+    font-size: 0.49em;
+    margin-left: 5.6px;
+    font-weight: normal;
+    vertical-align: middle;
+    background: transparent;
+}
+
+.best-paper-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #8B4513;
+    padding: 0.7px 4.2px;
+    border-radius: 8.4px;
+    font-size: 0.49em;
+    margin-left: 5.6px;
+    font-weight: bold;
+    vertical-align: middle;
+    border: 1.4px solid #FFA500;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.paper-title a {
+    color: #003C6B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.paper-title a:hover {
+    text-decoration: underline;
+    color: #D36A00;
+    transition: all 0.3s ease;
+}
+
+.paper-meta {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.paper-abstract {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.paper-doi {
+    color: #888;
+    font-size: 0.85em;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.paper-keywords {
+    color: #888;
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+.keyword-link {
+    color: #733eee;
+    text-decoration: none;
+    border: 1px solid #733eee;
+    padding: 2px 6px;
+    margin: 0 2px;
+    border-radius: 12px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.keyword-link:hover {
+    background-color: #733eee;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(115, 62, 238, 0.3);
+}
+
+.author-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.author-link:hover {
+    text-decoration: underline;
+    color: #D36A00;
+    transform: translateY(-1px);
+}
+
+.no-results {
+    text-align: center;
+    color: #e94560;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        width: 80%;
+    }
+    
+    .result-count {
+        display: block;
+        margin: 10px auto 0;
+        width: fit-content;
+    }
+}

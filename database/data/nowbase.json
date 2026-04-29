@@ -1,0 +1,1805 @@
+[
+  {
+    "id": 1,
+    "title": "刚体力学在游戏场景破坏中的应用研究综述",
+    "authors": [
+      "doro",
+      "copycat666",
+      "yifanNie",
+      "azulin",
+      "anonymous"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "刚体力学",
+      "游戏物理引擎",
+      "场景破坏系统",
+      "碰撞检测",
+      "性能优化"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E5%88%9A%E4%BD%93%E5%8A%9B%E5%AD%A6%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%9C%BA%E6%99%AF%E7%A0%B4%E5%9D%8F%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6%E7%BB%BC%E8%BF%B0.pdf",
+    "specialNote": null,
+    "abstract": "本文系统研究了刚体力学在游戏场景破坏中的应用，从理论基础到实现技术进行了全面探讨。首先阐述了刚体力学的核心原理，包括刚体定义、转动动力学、运动定律和碰撞理论等基础理论，然后深入分析了游戏物理引擎中刚体系统的实现架构，涵盖刚体表示方法、数值积分技术、碰撞检测算法（如BVH层次结构、SAT分离轴定理、CCD连续碰撞检测）以及约束求解机制，重点研究了基于刚体力学的场景破坏系统实现方法，对比了预计算破坏（如《彩虹六号：围攻》的预切割技术）和实时过程式破坏（如Voronoi分割、有限元方法）等不同技术路线的优劣，详细探讨了碎片模拟、破坏程度分级和LOD控制等关键技术，并提出了包括空间划分、多线程并行计算和机器学习加速在内的性能优化方案，通过《彩虹六号：围攻》《Teardown》等典型游戏的破坏系统案例，分析了不同技术方案的实际应用效果，最后总结了当前面临的计算复杂度与实时性矛盾等技术挑战，展望了AI加速模拟、混合计算方法等未来发展方向，为游戏物理引擎的研发和优化提供了理论指导和技术参考。",
+    "nowbasedoi": "C5C8A72479",
+    "published": "2025-05-04T03:27:23.411757"
+  },
+  {
+    "id": 2,
+    "title": "基于计算流体力学的游戏\"物理水\"渲染技术综述",
+    "authors": [
+      "doro",
+      "copycat666",
+      "yifanNie",
+      "azulin",
+      "anonymous"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "CFD",
+      "Navier-Stokes方程",
+      "光线追踪",
+      "物理水",
+      "液体渲染"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E5%9F%BA%E4%BA%8E%E8%AE%A1%E7%AE%97%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6%E7%9A%84%E6%B8%B8%E6%88%8F%E7%89%A9%E7%90%86%E6%B0%B4%E6%B8%B2%E6%9F%93%E6%8A%80%E6%9C%AF%E7%BB%BC%E8%BF%B0.pdf",
+    "specialNote": null,
+    "abstract": "随着AAA级游戏对物理真实感的需求提升，基于计算流体力学（CFD）的液体渲染技术已成为图形学领域的研究热点。本文系统综述了CFD在游戏引擎中的实时化实现路径，重点分析了Navier－Stokes方程的简化模型（包括StableFluids算法和SPH方法）、GPU并行加速架构（如CUDA和ComputeShader实现）以及艺术导向的参数控制系统。研究显示，现代游戏通过混合解法（如《刺客信条：英灵殿》采用的网格－粒子混合模型）可在RTX4080显卡上实现4ms／frame的实时海水模拟，同时通过屏幕空间流体渲染（SSFR）技术显著降低移动端功耗。本文还探讨了光线追踪与CFD的融合趋势（如NVIDIAWaveWorks2．0的技术路线），并指出当前技术瓶颈在于湍流模拟的实时性与跨平台兼容性。本综述为游戏开发者提供了CFD技术选型的决策框架，对元宇宙环境下的流体仿真具有指导意义。",
+    "nowbasedoi": "020716F163",
+    "published": "2025-05-03T16:57:44.752470"
+  },
+  {
+    "id": 3,
+    "title": "虚拟现实技术研究综述：从理论基础到前沿应用",
+    "authors": [
+      "copycat666"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "虚拟现实",
+      "计算机图形学",
+      "CursorMPC",
+      "Unity",
+      "Blender",
+      "神经渲染"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E8%99%9A%E6%8B%9F%E7%8E%B0%E5%AE%9E%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E7%BB%BC%E8%BF%B0%EF%BC%9A%E4%BB%8E%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80%E5%88%B0%E5%89%8D%E6%B2%BF%E5%BA%94%E7%94%A8.pdf",
+    "specialNote": "期刊首发论文！",
+    "abstract": "本文系统考察虚拟现实技术的理论演进与实践创新，构建”基础理论－关键技术－工具链－应用场景”的四维分析框架。在计算机图形学层面，解析基于物理的渲染（PBR）管线与实时光追加速结构，建立从齐次坐标变换到片段着色的完整数学模型。技术前沿部分创新性地提出交互范式分类矩阵，对比分析Cursor MPC等三种新型输入设备的Fitts' Law性能指标揭示触觉反馈延迟与临场感的幂律关系。针对开发工具链，实证比较Unity URP与Blender Eevee在Steam VR平台下的渲染效能（p<0．01），提出多软件协同的QARC工作流模型。通过医疗仿真（软组织形变误差<2.1mm）和教育实训（操作正确率提升38％）等典型案例，验证技术方案的适用边界。研究指出，神经渲染与边缘计算的融合将突破现有时延瓶颈，为元宇宙建设提供新范式。",
+    "nowbasedoi": "FCB794D498",
+    "published": "2025-05-01T05:44:53.662299"
+  },
+  {
+    "id": 4,
+    "title": "基于支持向量机（SVM）的图像分类研究",
+    "authors": [
+      "copycat666"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "支持向量机（SVM）",
+      "图像分类",
+      "特征提取",
+      "灰度共生矩阵（GLDM）",
+      "数据挖掘算法"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E5%9F%BA%E4%BA%8E%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA%EF%BC%88SVM%EF%BC%89%E7%9A%84%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E7%A0%94%E7%A9%B6.pdf",
+    "specialNote": "期刊首发论文！",
+    "abstract": "本文研究了基于支持向量机（SVM）的图像分类方法。SVM以其强大的分类性能和良好的泛化能力，在图像分类任务中展现出优势。文章介绍了SVM的基本原理，并阐述了具体的实验过程。实验部分采用公开数据集，利用灰度共生矩阵（GLDM）进行特征提取，最终在MatlabR2024a中进行训练与测试。结果显示SVM在分类准确率等方面表现较好。总之，基于SVM的图像分类方法是已经被验证的一种有效的解决方案。",
+    "nowbasedoi": "BB69AD6139",
+    "published": "2025-05-01T05:44:53.573489"
+  },
+  {
+    "id": 5,
+    "title": "王者荣耀高端局战术体系与打法策略综述",
+    "authors": [
+      "百星王者代练+v…"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "王者荣耀",
+      "高端局",
+      "战术体系",
+      "资源运营",
+      "阵容配置"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E9%AB%98%E7%AB%AF%E5%B1%80%E6%88%98%E6%9C%AF%E4%BD%93%E7%B3%BB%E4%B8%8E%E6%89%93%E6%B3%95%E7%AD%96%E7%95%A5%E7%BB%BC%E8%BF%B0.pdf",
+    "specialNote": null,
+    "abstract": "本文针对王者荣耀高端对局（巅峰赛2000分以上及荣耀王者段位）中的核心战术体系进行系统性分析，重点探讨版本强势阵容配置、资源运营策略及团战执行要点。研究表明，高端局胜负关键不仅在于个人操作水平，更取决于团队对版本理解的深度、资源控制能力及战术执行效率。通过解析当前主流战术体系，本文旨在为进阶玩家提供系统的战术指导。",
+    "nowbasedoi": "2F30391747",
+    "published": "2025-05-03T06:17:18.232975"
+  },
+  {
+    "id": 6,
+    "title": "电子竞技版本迭代对竞技平衡性的调控机制与影响研究",
+    "authors": [
+      "非静态画面.exe"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "电子竞技版本迭代",
+      "竞技平衡性调控",
+      "DOTA2赛事分析",
+      "动态平衡模型"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E7%94%B5%E5%AD%90%E7%AB%9E%E6%8A%80%E7%89%88%E6%9C%AC%E8%BF%AD%E4%BB%A3%E5%AF%B9%E7%AB%9E%E6%8A%80%E5%B9%B3%E8%A1%A1%E6%80%A7%E7%9A%84%E8%B0%83%E6%8E%A7%E6%9C%BA%E5%88%B6%E4%B8%8E%E5%BD%B1%E5%93%8D%E7%A0%94%E7%A9%B6.pdf",
+    "specialNote": null,
+    "abstract": "本研究采用实证分析与理论建模相结合的方法，系统考察了电子竞技领域中版本迭代对竞技平衡性的调控机制及其多维影响。以DOTA2国际邀请赛（TI）系列赛事为研究对象，重点分析2013－2016年间三个标志性版本变革案例（TI3泉水钩机制调整、TI4推进体系重构、TI5蓝猫英雄削弱），揭示电子竞技平衡性调控区别于传统体育的独特特征。研究发现，游戏开发商通过参数级调整、机制重置和系统重构三种方式实施版本调控，其平均干预强度达到传统体育规则的4．2倍，而迭代周期仅为传统体育的1／15。这种高强度、高频次的调控模式虽然有效维持了赛事观赏性，但也导致职业战队平均战术生命周期缩短至8．7个月，形成＂版本追赶＂的竞技困境。研究进一步构建了＂双轨反馈＂模型，阐明开发商在平衡竞技性与商业诉求时的决策逻辑，为电子竞技生态治理提供理论依据。",
+    "nowbasedoi": "538297C3F9",
+    "published": "2025-05-03T06:03:54.035472"
+  },
+  {
+    "id": 7,
+    "title": "基于多级驱动的FPS游戏反作弊系统设计与对抗机制研究",
+    "authors": [
+      "huoji120"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "第一人称射击游戏（FPS）",
+      "内核驱动防护",
+      "硬件辅助作弊",
+      "系统回调绕过",
+      "作弊与反作弊技术"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E5%9F%BA%E4%BA%8E%E5%A4%9A%E7%BA%A7%E9%A9%B1%E5%8A%A8%E7%9A%84FPS%E6%B8%B8%E6%88%8F%E5%8F%8D%E4%BD%9C%E5%BC%8A%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AF%B9%E6%8A%97%E6%9C%BA%E5%88%B6%E7%A0%94%E7%A9%B6.pdf",
+    "specialNote": null,
+    "abstract": "游戏反作弊与作弊技术的对抗呈现出快速迭代的特征，近年来每年都有显著的技术演变。本文聚焦于2019至2020年间最为普遍的驱动层反作弊保护实现原理，深入剖析其核心机制与对抗策略。这一时期的反作弊技术代表了当前主流反作弊系统（如BattleEye（BE）和EasyAnti－Cheat（EAC））的基础架构，其核心在于通过内核级驱动（如BEDaisy．sys）实现高权限的系统监控，包括内存扫描、进程行为分析以及对抗调试器附加等关键技术。驱动层反作弊的优势在于能够深入操作系统内核，检测并阻断传统内存修改类作弊行为，如内存挂和封包挂。然而，随着硬件级作弊手段（如DMA外挂和KVM虚拟化技术）的兴起，传统驱动层反作弊的局限性逐渐暴露，例如无法有效检测跨设备内存读取或虚拟机环境下的作弊行为。本文还将探讨反作弊系统如何通过行为分析、数据加密和实时更新策略来应对新兴作弊技术，同时分析BE和EAC在实际部署中的优缺点，包括误封问题、性能开销以及隐私合规性挑战。通过梳理这一关键时期的技术发展，本文旨在为理解当前反作弊生态提供系统性视角，并展望未来可能的演进方向。",
+    "nowbasedoi": "4EBC3AD423",
+    "published": "2025-05-03T05:47:20.325755"
+  },
+  {
+    "id": 8,
+    "title": "（已作废）论文格式示例：关于游戏《英雄联盟》的游戏体验调查",
+    "authors": [
+      "copycat666"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "英雄联盟（LOL）",
+      "量表分析",
+      "游戏体验",
+      "视觉搜索",
+      "游戏心理学"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E8%AE%BA%E6%96%87%E6%A0%BC%E5%BC%8F%E6%A8%A1%E6%9D%BF.pdf",
+    "specialNote": "该论文模板于2026年1月1日起正式作废，请前往：https://journalofest.netlify.app/nowbase?doi=TM-2-1-2026-R 查阅最新论文格式，并前往首页→“立即投稿”→“Microsoft Word模板下载”或直接访问链接：https://gitee.com/copycat666/articles/raw/master/templates/joest_msword.doc 下载最新的word模板。",
+    "abstract": "本研究旨在探讨《英雄联盟》的游戏体验及其对玩家认知、情感和社会互动的影响，具体目标包括验证国外经典游戏体验量表在中文语境下的适用性、分析高段位玩家与新手在视觉选择性注意力上的差异以及考察玩家在游戏中的情感体验及社交互动模式。研究方法上，首先通过探索性因子分析和验证性因子分析对游戏体验量表进行修订，删除部分题目后形成适合中国玩家的版本，其次采用视觉搜索任务和事件相关电位技术对比高段位玩家与新手的视觉选择性注意力差异，最后通过问卷调查收集玩家情感体验和社交互动数据，并分析性别与游戏时长的调节效应。研究结果显示，修订后的中文版量表具有良好的信效度，能够有效评估中国玩家的游戏体验，高段位玩家在视觉搜索任务中表现出更快的反应速度和更高的准确率，其大脑前额叶区域激活程度显著高于新手，问卷调查表明男性玩家在长时间游戏后更容易产生负面情绪，而女性玩家更注重游戏中的社交互动。结论表明，《英雄联盟》的游戏体验量表在中国文化背景下具有适用性，长期游戏可能对玩家的认知能力产生积极影响，但需要关注不同性别玩家在情感体验和社交需求上的差异，建议游戏开发者优化匹配机制和社交功能以提升整体游戏体验。",
+    "nowbasedoi": "BDE15B9D1A"
+  },
+  {
+    "id": 9,
+    "title": "CS:GO回合经济系统的行为经济学分析",
+    "authors": [
+      "Char1es",
+      "copycat666",
+      "azulin"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "CS:GO",
+      "回合经济系统",
+      "资源稀缺性",
+      "风险决策",
+      "战略互动",
+      "虚拟微观经济"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/CSGO%E5%9B%9E%E5%90%88%E7%BB%8F%E6%B5%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%A1%8C%E4%B8%BA%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%88%86%E6%9E%90.pdf",
+    "specialNote": null,
+    "abstract": "《反恐精英：全球攻势》（CS：GO）游戏内的回合经济系统，是一个精巧、动态且高度战略性的虚拟微观经济模型。本论文从行为经济学与博弈论视角出发，分析这一系统如何通过资源稀缺性、风险回报权衡、周期性重置与团队协作外部性等核心机制，深刻塑造了玩家的决策逻辑与比赛进程。该系统强制玩家在每一回合面对最基础的经济学问题：在有限预算（金钱）下，如何配置资源（武器、装备）以最大化获胜概率，同时为未来回合进行储蓄与投资。这种设计不仅模拟了现实中的预算约束、资本积累与风险管理，更引入了独特的“经济战”维度——通过战术选择削弱敌方经济，成为一种比单纯消灭对手更深层次的致胜手段。本文认为，CS：GO的回合经济系统超越了简单的游戏数值设计，它构建了一个持续演化的决策环境，迫使玩家作为有限理性的个体，在个体利益与团队公共品（团队经济健康）之间进行权衡，是电子竞技战术深度与战略不确定性的核心源泉。",
+    "nowbasedoi": "303C3F21DA",
+    "published": "2025-12-30T20:15:05.963879"
+  },
+  {
+    "id": 10,
+    "title": "\"像素化健康\"：MOBA类电竞选手的饮食亚文化与科学营养干预的张力研究——以《英雄联盟》职业生态为例",
+    "authors": [
+      "野兽仙贝哼哼啊啊啊"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "饮食亚文化",
+      "营养干预",
+      "英雄联盟",
+      "像素化健康"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E5%83%8F%E7%B4%A0%E5%8C%96%E5%81%A5%E5%BA%B7%EF%BC%9AMOBA%E7%B1%BB%E7%94%B5%E7%AB%9E%E9%80%89%E6%89%8B%E7%9A%84%E9%A5%AE%E9%A3%9F%E4%BA%9A%E6%96%87%E5%8C%96%E4%B8%8E%E7%A7%91%E5%AD%A6%E8%90%A5%E5%85%BB%E5%B9%B2%E9%A2%84%E7%9A%84%E5%BC%A0%E5%8A%9B%E7%A0%94%E7%A9%B6%E2%80%94%E2%80%94%E4%BB%A5%E3%80%8A%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%E3%80%8B%E8%81%8C%E4%B8%9A%E7%94%9F%E6%80%81%E4%B8%BA%E4%BE%8B.pdf",
+    "specialNote": null,
+    "abstract": "本研究以《英雄联盟》职业电竞生态为例，探讨了MOBA类电竞选手群体中自发形成的饮食亚文化与日益深入的科学营养干预方案之间的复杂张力。电子竞技的职业化进程将选手身体推向高度规训的前沿，然而其饮食实践却深植于一种独特的“像素化健康”逻辑之中——即在高压、昼夜颠倒、以屏幕为中心的职业环境下，形成了一套兼顾即时功能性补给、团队社交维系、情绪调节与亚文化身份认同的饮食习性。这种习性常表现为对能量饮料、外卖快餐的依赖，以及围绕饮食的集体仪式。与此同时，俱乐部与联赛为提升成绩、保障资产与塑造职业形象，正积极引入基于传统体育模型的科学营养干预，强调标准化、纪律性与长期身体优化。研究发现，两种逻辑在认知、时间节奏、社交情感及身体感知层面存在显著冲突：选手追求口感快乐与即时效能，而科学推崇营养数据与长期健康，游戏时间与生物钟时间难以调和，团队放纵的快乐常对抗个体管理的纪律。这种张力本质上是电竞职业化进程中草根亚文化与精英管理主义的碰撞。研究最终指出，成功的健康促进并非简单地以科学取代文化，而需进行“协商式整合”，例如以游戏化语言沟通营养知识、设计兼具健康与社交属性的餐饮活动、实施弹性管理制度等，使科学干预成为文化内部的“翻译者”与“参与者”，而非外部的“规训者”，从而在尊重电竞独特生态的前提下，切实提升选手的健康水平与职业生涯可持续性。",
+    "nowbasedoi": "6DEBF292C3",
+    "published": "2025-12-18T00:18:48.546902"
+  },
+  {
+    "id": 11,
+    "title": "《荒野大镖客：救赎2》：一部数字时代的美国史诗",
+    "authors": [
+      "Ricky Thompson",
+      "尼莫的小屋",
+      "关岛死神",
+      "yemar"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "荒野大镖客：救赎2",
+      "美国历史",
+      "美国西部",
+      "第九艺术"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E3%80%8A%E8%8D%92%E9%87%8E%E5%A4%A7%E9%95%96%E5%AE%A2%EF%BC%9A%E6%95%91%E8%B5%8E2%E3%80%8B%EF%BC%9A%E4%B8%80%E9%83%A8%E6%95%B0%E5%AD%97%E6%97%B6%E4%BB%A3%E7%9A%84%E7%BE%8E%E5%9B%BD%E5%8F%B2%E8%AF%97.pdf",
+    "specialNote": null,
+    "abstract": "《荒野大镖客：救赎2》是一部重塑开放世界标准的史诗巨作，它以惊人的技术细节与艺术完整性，构筑了一个呼吸着的、处于历史转折点的美国西部世界。游戏通过亚瑟·摩根这一复杂反英雄的救赎之路，讲述了一个关于时代终结、自由幻灭与人性挣扎的深沉故事。其超越性的视听语言、系统驱动的沉浸模拟以及对“无用之美”的极致追求，共同定义了第九艺术的叙事高度。它不仅仅是一款娱乐产品，更是一面深刻的文化棱镜，折射出对资本主义、工业文明与人类生存状态的批判性思考。同时，它辉煌成就背后所伴随的争议性开发模式，也为整个游戏产业留下了关于创作伦理与商业代价的重要启示，最终成为我们这个时代一部不可多得的数字人文经典。",
+    "nowbasedoi": "23A9CE2915",
+    "published": "2025-12-18T01:09:44.124608"
+  },
+  {
+    "id": 12,
+    "bestpaperaward": true,
+    "title": "CalmaEngine：一种基于ECS架构的命令行游戏引擎与开发环境",
+    "authors": [
+      "twinkyHowdyLittleDark"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "游戏引擎",
+      "命令行界面",
+      "字符渲染",
+      "实体组件系统",
+      "C语言"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/CalmaEngine%EF%BC%9A%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8EECS%E6%9E%B6%E6%9E%84%E7%9A%84%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E4%B8%8E%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.pdf",
+    "specialNote": "本研究由电子游戏发展委员会(Development of Electronic Gaming Committee，China)和未来道具研究所(Future Gadget Lab，Japan)主导。同时，感谢游民星空社区(gamersky) 和游戏极客社区(gamegeeks)对本研究的支持与帮助！",
+    "abstract": "在现代游戏开发领域，以Unity、UnrealEngine为代表的图形化游戏引擎功能强大，但其复杂度也为初学者与快速原型设计带来了极高的学习门槛。为了回归游戏逻辑设计的本质，并提供一个极简、零外部依赖的创作环境，本文设计并实现了一个名为CalmaEngine的、完全基于字符渲染的命令行（Console）游戏引擎。CalmaEngine采用纯C语言开发，其核心架构围绕控制台字符缓冲区构建，实现了包括双缓冲渲染、轻量级实体组件系统（ECS）、输入管理、基于网格的物理碰撞以及场景管理在内的核心引擎模块。通过精心设计的API，CalmaEngine将底层终端控制细节完全封装，使开发者能够聚焦于游戏玩法、状态机与交互逻辑的实现。为验证引擎的完备性与实用性，本文基于CalmaEngine成功开发了《推箱子》与《地牢探险者》两款风格迥异的游戏原型。开发过程表明，CalmaEngine能够高效支持从益智解谜到轻度角色扮演等不同类型的游戏开发，显著降低了入门门槛，提升了原型迭代速度。评估部分从性能、代码简洁性和教育适用性三个维度对CalmaEngine进行了分析，确认其在教学、创意原型验证及复古游戏开发场景下具有明确的价值。本文的工作表明，在图形技术飞速发展的当下，回归字符界面的极简抽象，是一种有效降低认知负荷、深化对游戏核心架构理解的途径。CalmaEngine作为一个轻量级、可移植的开源项目，为游戏编程教育及创意快速表达提供了新的工具选择。",
+    "nowbasedoi": "8BE230AB32",
+    "published": "2025-12-19T02:14:10.646180"
+  },
+  {
+    "id": 13,
+    "title": "博弈理论在电子游戏中的系统性应用综述——理论模型、设计范式与前沿交叉",
+    "authors": [
+      "XiaochuanSun"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "博弈论",
+      "电子游戏",
+      "机制设计",
+      "纳什均衡"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E5%8D%9A%E5%BC%88%E7%90%86%E8%AE%BA%E5%9C%A8%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E5%BA%94%E7%94%A8%E7%BB%BC%E8%BF%B0%E2%80%94%E2%80%94%E7%90%86%E8%AE%BA%E6%A8%A1%E5%9E%8B%E3%80%81%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F%E4%B8%8E%E5%89%8D%E6%B2%BF%E4%BA%A4%E5%8F%89.pdf",
+    "specialNote": null,
+    "abstract": "博弈论作为研究理性决策主体间策略互动的数学理论，为分析与设计复杂的交互系统提供了强大的框架。电子游戏，尤其是多人在线游戏，本质上构成了一个由规则约束、玩家驱动的策略互动环境，这与博弈论的研究对象高度契合。本文系统性地综述了博弈论核心模型在游戏领域的应用。首先，我们建立了博弈论基本要素（玩家、策略、收益、信息）与游戏设计元素之间的映射关系。其次，我们重点探讨了完全信息静态博弈（以纳什均衡为核心）、完全信息动态博弈（运用逆向归纳法）、不完全信息博弈（贝叶斯博弈）以及重复博弈等经典模型在游戏平衡性设计、玩家策略分析、经济系统构建及社区行为引导等方面的具体应用与典型案例。进一步地，本文综述了博弈论在游戏拍卖行、匹配机制等机制设计问题中的应用，并展望了其与人工智能（如多智能体强化学习）、行为博弈论及演化博弈论等前沿领域的交叉融合趋势。最后，我们讨论了当前应用面临的挑战，如玩家效用量化困难与模型简化局限，并指出了未来利用游戏数据反哺理论发展等潜在研究方向。综述表明，博弈论不仅是解析游戏内在逻辑的锐利工具，其理论与游戏实践的持续互动也正在推动双方领域的共同深化与发展。",
+    "nowbasedoi": "04C18134EB",
+    "published": "2026-01-02T14:28:46.878164"
+  },
+  {
+    "id": 14,
+    "bestpaperaward": true,
+    "title": "论\"Steins;Gate\"世界线存在性：基于宏观量子历史与观测者依赖现实的物理模型",
+    "authors": [
+      "Hooin Kyoma",
+      "Duduru Mayuri",
+      "Itaru Otaku",
+      "Christina Makise",
+      "Shining Finger",
+      "Lukako Urushibara",
+      "Phyllis NyanNyan",
+      "Suzuha Amane",
+      "Maho Hiyajo",
+      "Kagari Shiina",
+      "Yuki Amane"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "Steins",
+      "Gate世界线",
+      "退相干历史",
+      "观测者依赖现实",
+      "诺维科夫自洽性原则",
+      "量子引力"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E8%AE%BASteins%3BGate%E4%B8%96%E7%95%8C%E7%BA%BF%E5%AD%98%E5%9C%A8%E6%80%A7%EF%BC%9A%E5%9F%BA%E4%BA%8E%E5%AE%8F%E8%A7%82%E9%87%8F%E5%AD%90%E5%8E%86%E5%8F%B2%E4%B8%8E%E8%A7%82%E6%B5%8B%E8%80%85%E4%BE%9D%E8%B5%96%E7%8E%B0%E5%AE%9E%E7%9A%84%E7%89%A9%E7%90%86%E6%A8%A1%E5%9E%8B.pdf",
+    "specialNote": "本研究由未来道具研究所（东京，日本）、东京电机大学（东京，日本）、维克多康多利亚大学（美国）等科研机构、高校合作。由主编团队、领域专家进行审核后收录至2025年数理科学年鉴。",
+    "abstract": "本文针对系列受控实验（如D－Mail、时间跳跃）所揭示的“全局历史重构”与“观测者记忆不变性”等反常现象，提出“世界线”具备物理实在性，而非单纯的数学或哲学隐喻。本研究旨在构建一个将世界线视为“宏观退相干历史分支”的物理模型，并将其置于扩展的量子场论与广义相对论框架中进行形式化描述。通过引入“历史态矢量”与“因果势垒”等概念，论文建立了世界线变动的动力学方程，并尝试将观测到的世界线变动率（如1．048596％）解释为与宇宙全局拓扑相关的“历史相变序参量”。理论表明，“命运石之门”所代表的世界线，可作为诺维科夫自洽性原则的一种弱化实现，为时间旅行悖论提供系统的物理解。本文进一步探讨了该模型的实验可检验性预言（如特定引力波背景信号），并论证了正视“观测者依赖现实”对于突破当前量子引力困境、发展一种包含历史本身作为动力学变量的全新物理学范式的关键意义。",
+    "nowbasedoi": "E0893A7072",
+    "published": "2026-01-19T02:33:29.085969"
+  },
+  {
+    "id": 15,
+    "bestpaperaward": true,
+    "title": "从“视觉真实”到“社会真实”的转向：——游戏“子供向”画风的社会连接功能与隐喻承载研究",
+    "authors": [
+      "Char1es"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "子供向画风",
+      "游戏社会学",
+      "视觉文化",
+      "连接主义",
+      "社会模拟"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E4%BB%8E%E8%A7%86%E8%A7%89%E7%9C%9F%E5%AE%9E%E5%88%B0%E7%A4%BE%E4%BC%9A%E7%9C%9F%E5%AE%9E%E7%9A%84%E8%BD%AC%E5%90%91%EF%BC%9A%E2%80%94%E2%80%94%E6%B8%B8%E6%88%8F%E2%80%9C%E5%AD%90%E4%BE%9B%E5%90%91%E2%80%9D%E7%94%BB%E9%A3%8E%E7%9A%84%E7%A4%BE%E4%BC%9A%E8%BF%9E%E6%8E%A5%E5%8A%9F%E8%83%BD%E4%B8%8E%E9%9A%90%E5%96%BB%E6%89%BF%E8%BD%BD%E7%A0%94%E7%A9%B6.pdf",
+    "specialNote": null,
+    "abstract": "随着数字技术与社会形态的演变，电子游戏的核心功能正从追求“视觉真实”转向建构“社会真实”。本文以《动物森友会》《鹅鸭杀》《幻兽帕鲁》等采用“子供向”画风的现象级游戏为例，论证此类视觉风格并非审美降级，而是游戏范式从“表现主义”转向“连接主义”过程中的关键美学适配。“子供向”画风通过降低认知与心理门槛，使游戏成为开放的社会互动平台。在此基础上，研究揭示这些游戏在卡通外表下蕴含深刻的社会模拟：如《动物森友会》对现代性困境的温和呈现，《鹅鸭杀》对信任与权力动力学的展演，以及《幻兽帕鲁》对后人类伦理的反思。结论认为，子供向画风的流行标志着游戏媒介的成熟——它以其互动特性成为探讨社会议题、实现情感联结与意识形态反思的日常化场域，体现了“低门槛高深度”的设计哲学。本文为游戏研究提供了新的理论视角，亦为理解数字时代文化与社会心理提供了切口。",
+    "nowbasedoi": "5BECFF74F5",
+    "published": "2026-01-02T14:18:59.864181"
+  },
+  {
+    "id": 16,
+    "title": "2025年电子游戏产业报告：游戏服务从业者的生存现状与困境——基于田野调查的一些案例研究",
+    "authors": [
+      "案例S",
+      "案例Y",
+      "案例P",
+      "案例K",
+      "copycat666",
+      "百星王者代练+v…",
+      "doro",
+      "mysteriousK",
+      "Char1es",
+      "hysteria",
+      "爱编程的dqs",
+      "ubi_potato",
+      "synp",
+      "lubyankalover",
+      "风物之诗",
+      "李晟",
+      "jjj123456",
+      "如果我是红狼你会爱我吗",
+      "shenhuman",
+      "厨神stan",
+      "huoji120",
+      "op似一似好麻",
+      "张一鸣",
+      "(^_^)",
+      "085404是个好专业"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "游戏服务从业者",
+      "数字零工",
+      "劳动权益",
+      "职业健康",
+      "产业伦理"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/2025%E5%B9%B4%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E4%BA%A7%E4%B8%9A%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%B8%B8%E6%88%8F%E6%9C%8D%E5%8A%A1%E4%BB%8E%E4%B8%9A%E8%80%85%E7%9A%84%E7%94%9F%E5%AD%98%E7%8E%B0%E7%8A%B6%E4%B8%8E%E5%9B%B0%E5%A2%83%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E%E7%94%B0%E9%87%8E%E8%B0%83%E6%9F%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A1%88%E4%BE%8B%E7%A0%94%E7%A9%B6.pdf",
+    "specialNote": "本报告是伦理道德审查组的内参，经由伦理道德审查组审核、润色、重撰写、脱敏之后，予以小部分公开。出现的案例完全真实，不会对当事人存在任何显性或隐性的指涉。",
+    "abstract": "本报告基于对电竞专业学生、代练工作室从业人员及陪玩从业者为期数月的深度田野调查，首次系统性地描绘了中国电子游戏产业下游服务从业者的生存图景。报告指出，在产业规模持续扩张的表象下，存在一个规模庞大却近乎“规则真空”的灰色就业地带。从业者普遍面临劳动保障缺失、职业健康风险高企、发展路径闭塞、伦理困境加剧及社会认同脆弱等结构性困境。本报告通过脱敏案例分析，揭示了产业繁荣与底层劳动者权益保护之间的严重断裂，并呼吁将游戏服务从业者的福祉纳入产业可持续发展及公共政策讨论的核心议程。",
+    "nowbasedoi": "B0BDA18DF0",
+    "published": "2026-01-02T22:32:23.762915"
+  },
+  {
+    "id": 17,
+    "title": "电子游戏科学与技术（公共科学版）创作指南",
+    "authors": [
+      "编辑委员会",
+      "伦理道德审查组",
+      "学术诚信监察委员会"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "电子游戏科学与技术（公共科学版）",
+      "创作指南"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%EF%BC%88%E5%85%AC%E5%85%B1%E7%A7%91%E5%AD%A6%E7%89%88%EF%BC%89%E5%88%9B%E4%BD%9C%E6%8C%87%E5%8D%97.pdf",
+    "specialNote": null,
+    "abstract": "本文档是《电子游戏科学与技术》期刊下设的“公共科学版”的官方创作指南。该版块定位为游戏研究领域的“思想广场”，旨在发表那些超越传统学科范式、但具有显著公共性、对话性与启发性的游戏相关思考。核心内容与要求如下：文体上欢迎深度评论、学术随笔、调查报告、对话对谈、思想实验等多种体裁，写作须以清晰、有据、建设性为原则，面向广大受过教育的读者。内容上重点关注游戏相关的公共议题，包括产业生态批判、技术伦理前沿、文化表征政治、社群身份研究、教育健康政策、美学哲学思辨及学术生态自反性。所有投稿必须通过严格的伦理审查，遵循信息、研究、内容安全及利益冲突披露等细则。评审采用独特的“公共价值评审”哲学，依据议题重要性、论述洞察力等维度进行，旨在促进对话与完善。最后，指南明确了投稿格式并提供了范例，以鼓励勇敢、真诚且负责任的公共写作。",
+    "nowbasedoi": "A6C31265A5",
+    "published": "2026-01-07T01:42:25.920410"
+  },
+  {
+    "id": 18,
+    "title": "电子游戏科学与技术（社会科学版）创作指南",
+    "authors": [
+      "社会科学课题组",
+      "编辑委员会",
+      "伦理道德审查组",
+      "学术诚信监察委员会"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "电子游戏科学与技术（社会科学版）",
+      "创作指南"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%EF%BC%88%E7%A4%BE%E4%BC%9A%E7%A7%91%E5%AD%A6%E7%89%88%EF%BC%89%E5%88%9B%E4%BD%9C%E6%8C%87%E5%8D%97.pdf",
+    "specialNote": null,
+    "abstract": "本文档是《电子游戏科学与技术》期刊“社会科学版”的官方创作指南，旨在为学者提供分析游戏与社会复杂互动的系统性框架。指南的核心是三条研究路径：一是“向内审视”，将游戏本身作为“浓缩的社会世界”，分析其内部秩序、经济与文化逻辑，二是“向外追踪”，将游戏视为影响现实的“干预变量”，探究其对玩家行为与社会结果的因果机制，三是“系统节点”，视游戏为嵌入全球政治经济与文化网络的组成部分，考察其与宏观系统的相互塑造。所有研究均须坚持问题意识的社会性、证据的严谨性与结论的公共价值。文档详细阐述了各路径的典型研究问题，并强调了社会科学研究特有的伦理考量（如人类受试者保护、数据伦理及对“影响研究”的审慎责任）。最后，明确了学术写作规范、基于路径差异的评审标准矩阵，以及鼓励数据共享、连接公共对话的发表导向，以期构建一种扎根经验、富有理论想象力且心怀公共责任的游戏研究传统。",
+    "nowbasedoi": "AE30B8FE9B",
+    "published": "2026-01-07T02:35:06.531643"
+  },
+  {
+    "id": 19,
+    "title": "电子游戏科学与技术（人文科学版）创作指南",
+    "authors": [
+      "第九艺术课题组",
+      "编辑委员会",
+      "伦理道德审查组",
+      "学术诚信监察委员会"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "电子游戏科学与技术（人文科学版）",
+      "创作指南"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%EF%BC%88%E4%BA%BA%E6%96%87%E7%A7%91%E5%AD%A6%E7%89%88%EF%BC%89%E5%88%9B%E4%BD%9C%E6%8C%87%E5%8D%97.pdf",
+    "specialNote": null,
+    "abstract": "本文档是《电子游戏科学与技术》期刊“人文科学版”的官方创作指南。该版块致力于对游戏进行深度的人文阐释与批判，将游戏视为文化的载体、美学的实验场和思想的媒介。我们期待的研究，需对游戏文本（包括规则、视觉、叙事等元素）进行深度细读与阐释，或运用文学、哲学、艺术史等人文理论工具进行锐利的批判分析，或将游戏置于历史与谱系脉络中梳理其演变，或对其涉及的根本哲学与伦理问题进行严肃思辨。研究应避免空洞理论套用、教条主义批判或流于个人感受。指南提供了文本阐释、批判理论、历史比较、哲学思辨四条核心方法论路径，明确了注重文本依据、平衡创作与批评、具备文化敏感性等研究伦理，并概述了以问题深度、方法论严谨性、论证质量为核心的评审标准。最终，我们期待能深入游戏肌理、又能将其置于人类文明长河中反思的学术工作，以深化我们对游戏这一综合艺术形式的理解。",
+    "nowbasedoi": "797794081D",
+    "published": "2026-01-07T02:57:26.604846"
+  },
+  {
+    "id": 20,
+    "title": "电子游戏科学与技术（教育科学版）创作指南",
+    "authors": [
+      "Edu+课题组",
+      "电子竞技职业教育课题组",
+      "编辑委员会",
+      "伦理道德审查组",
+      "学术诚信监察委员会"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "电子游戏科学与技术（教育科学版）",
+      "创作指南"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%EF%BC%88%E6%95%99%E8%82%B2%E7%A7%91%E5%AD%A6%E7%89%88%EF%BC%89%E5%88%9B%E4%BD%9C%E6%8C%87%E5%8D%97.pdf",
+    "specialNote": null,
+    "abstract": "本文档是《电子游戏科学与技术》期刊“教育科学版”的官方创作指南。该版块致力于在教育视域下对游戏进行系统性的学术探索与设计实践，聚焦三大支柱方向：作为教学设计工具的游戏化学习与严肃游戏开发，作为新兴职业领域的电子竞技职业教育体系建构，以及作为发展工具的游戏在认知、社交、创造力等能力培养及康复治疗中的应用。所有研究需遵循严格的方法论与核心伦理规范，尤其强调涉及未成年参与者的保护、疗效声称的审慎性及对教育公平的考量。本指南明确了基于不同研究方向的写作规范与评审标准矩阵，并鼓励具有实践可操作性、扎实证据与理论贡献的投稿，旨在推动游戏教育研究既保持科学严谨，又深植人文关怀，最终服务于更有效、更公平、更完整的人的全面发展。",
+    "nowbasedoi": "38F4BAAC95",
+    "published": "2026-01-07T13:53:08.992555"
+  },
+  {
+    "id": 21,
+    "title": "电子游戏科学与技术（健康医学版）创作指南",
+    "authors": [
+      "运动医学与营养学课题组",
+      "电子竞技康复理疗课题组",
+      "编辑委员会",
+      "伦理道德审查组",
+      "学术诚信监察委员会"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "电子游戏科学与技术（健康医学版）",
+      "创作指南"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%EF%BC%88%E5%81%A5%E5%BA%B7%E5%8C%BB%E5%AD%A6%E7%89%88%EF%BC%89%E5%88%9B%E4%BD%9C%E6%8C%87%E5%8D%97.pdf",
+    "specialNote": null,
+    "abstract": "本文档是《电子游戏科学与技术》期刊“健康医学版”的官方创作指南。本版块聚焦电子游戏与身心健康交叉领域的科学研究，以构建负责任、可持续、以人为本的健康游戏生态为宗旨，致力于通过严谨的医学、心理学、运动科学及人因工程学方法，系统探究游戏行为对健康的影响机制，并发展基于游戏技术的健康干预与促进方案。指南围绕四大核心研究领域展开：电竞运动医学与职业健康，重点关注职业选手伤病流行病学、预防康复体系及健康管理生态，游戏行为与生理健康，深入考察游戏对神经系统、视觉系统、循环代谢及肌肉骨骼系统的具体影响，游戏与心理健康，科学审视游戏使用与情绪、认知功能及心理障碍的复杂关系，并探索游戏化心理治疗的临床潜力，人因工程与健康设计，旨在从源头上开发符合人体工学、具备健康监测与引导功能的游戏设备与环境。所有投稿研究须遵循严格的跨学科方法论与核心伦理准则，包括确保参与者（尤其涉及临床干预时）的安全与隐私、避免对玩家群体的污名化，并鼓励医工交叉、产学研协同的研究模式。评审将依据科学严谨性、临床或实践意义、伦理合规性、创新性及表述清晰度等维度，针对不同研究领域进行侧重评估。本版块期待推动具有直接应用价值的健康指南与标准制定，并促进与期刊其他版块的学术对话。",
+    "nowbasedoi": "131BF2B176",
+    "published": "2026-01-07T15:09:27.479960"
+  },
+  {
+    "id": 22,
+    "title": "致“未来科学家”的一封邀请函——电子游戏科学与技术（少年科学志）创作指南",
+    "authors": [
+      "copycat666",
+      "Gina老师",
+      "doro",
+      "mysteriousK",
+      "Char1es"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E8%87%B4%E2%80%9C%E6%9C%AA%E6%9D%A5%E7%A7%91%E5%AD%A6%E5%AE%B6%E2%80%9D%E7%9A%84%E4%B8%80%E5%B0%81%E9%82%80%E8%AF%B7%E5%87%BD%E2%80%94%E2%80%94%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%EF%BC%88%E5%B0%91%E5%B9%B4%E7%A7%91%E5%AD%A6%E5%BF%97%EF%BC%89%E5%88%9B%E4%BD%9C%E6%8C%87%E5%8D%97.pdf",
+    "specialNote": null,
+    "abstract": "嗨！未来的科学家、游戏探索家们：你好！当你点开这封信的时候，一场属于你自己的科学冒险已经悄悄开始了。你可能在想：“科学？那不是实验室里大人们做的事吗？”不，科学就在你身边——尤其是在你热爱的游戏世界里。想想看：当你为《我的世界》里的红石电路着迷时，你已经在触碰逻辑的奥秘，当你研究《王者荣耀》里英雄的属性和技能搭配时，你已经在进行数据分析，当你和朋友讨论游戏策略，或者被某个游戏剧情深深打动时，你已经在探索心理学和叙事的魅力。这就是《少年科学志》想邀请你做的事——把你的好奇变成探索，把你的游戏变成发现。我们相信，重要的不是你多大年纪，而是你有多大的好奇心。在这里，你可以把游戏当成你的“实验室”，用数学和物理的眼光观察它，把游戏当成“观察站”，记录玩家们如何交流协作，把游戏当成“创意工坊”，设计属于你自己的游戏规则和世界，你的探索可以是任何形式：一篇观察日记、一套亲手做的实验、一个简单的小程序、一份创意设计，甚至是一段分享思考的视频。唯一的要求是：它必须真实地记录了你自己的好奇、观察和尝试。我们知道你可能会有担心：“我的发现会不会太简单？”“我不会写正式的论文怎么办？”请记住：很多伟大的科学发现都始于一个简单的“为什么”。在这里，你的思考过程比完美的结果更珍贵。我们会这样支持你：1．所有投稿都会由大学生和青年研究者组成的“青年评审团”认真阅读，2．你会收到温暖的反馈信，听到真诚的想法和建议，3．特别有意思的探索，可能会获得一位真正的科学家或游戏设计师的专门指导，你的作品会被收录在《少年科学志·年度探索集》中，成为科学记录的一部分。当然，安全是最重要的。我们承诺：1．永远用笔名发表，保护你的隐私，2．所有探索都需要家长知情和同意，3．这里没有比赛和排名，只有互相学习和鼓励。亲爱的小探索家，科学不是成年人的专利，游戏也不只是娱乐。当你开始问“为什么”，开始动手“试一试”，开始记录“我发现”——你已经走在科学家的路上了。我们期待在《少年科学志》里，读到属于你的探索故事。那可能是一个关于游戏数据的发现，一次有趣的社会观察，或者一个天马行空的创意设计。祝你在游戏的世界里，发现科学的乐趣！《少年科学志》编辑部全体大朋友敬上",
+    "nowbasedoi": "BD6AAA3242",
+    "published": "2026-01-07T15:43:20.490549"
+  },
+  {
+    "id": 23,
+    "title": "电子游戏科学与技术（基础科学版）创作指南",
+    "authors": [
+      "copycat666",
+      "编辑委员会",
+      "伦理道德审查组",
+      "学术诚信监察委员会"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "电子游戏科学与技术（基础科学版）",
+      "创作指南"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%EF%BC%88%E5%9F%BA%E7%A1%80%E7%A7%91%E5%AD%A6%E7%89%88%EF%BC%89%E5%88%9B%E4%BD%9C%E6%8C%87%E5%8D%97.pdf",
+    "specialNote": null,
+    "abstract": "本文档是《电子游戏科学与技术》期刊“基础科学版”的官方创作指南。本版块致力于以形式化、数学化与计算化的严格方法，探究电子游戏作为复杂系统所遵循的内在科学规律，其核心使命在于将游戏研究提升至理论科学的层次，为理解所有游戏提供基础性原理、模型与工具。本版块聚焦四大核心领域：游戏数学与形式化理论（运用集合论、图论、范畴论等精确描述游戏规则与状态空间），游戏物理学与仿真科学（探究游戏物理规则与现实规律的异同及高效仿真模型），游戏认知科学与计算心理学（通过计算模型预测与解释玩家的认知策略与决策行为），以及游戏信息论与复杂性科学（度量游戏信息结构、策略深度与宏观动力学）。本版块具有独有规范：强烈建议使用LATEX进行排版以处理复杂数学公式，并遵循形式化写作要求，即核心概念必须预先给予无歧义的形式化定义，论证需符合数学逻辑。同时，我们强调可重复性与开放科学实践，鼓励作者公开研究数据与代码。评审标准以数学与科学严谨性为核心，重点关注形式化定义的严谨性、模型的创新性与解释力、方法论与实验的可靠性、表述的清晰度以及与既有理论的对话。本版块旨在构建游戏科学的理论基石，邀请相关领域研究者共同探索游戏世界的形式化基础与科学原理。",
+    "nowbasedoi": "BDA2E15BC0",
+    "published": "2026-01-07T22:58:29.102916"
+  },
+  {
+    "id": 24,
+    "title": "电子游戏科学与技术（工程技术版）创作指南",
+    "authors": [
+      "和泉みさお",
+      "新川誠一郎",
+      "鶴岡泰樹",
+      "synp",
+      "copycat666",
+      "doro",
+      "mysteriousK",
+      "编辑委员会",
+      "伦理道德审查组",
+      "学术诚信监察委员会"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "电子游戏科学与技术（工程技术版）",
+      "创作指南"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%EF%BC%88%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF%E7%89%88%EF%BC%89%E5%88%9B%E4%BD%9C%E6%8C%87%E5%8D%97.pdf",
+    "specialNote": "本指南由Unity Tech Japan、神户山手大学、心动网络等企业、科研单位帮助撰写，在此向各位工程师们致以诚挚谢意。",
+    "abstract": "本文档是《电子游戏科学与技术》期刊“工程技术版”的官方创作指南。本版块聚焦于电子游戏开发与运行背后的具体技术实现、工程实践与系统性解决方案，其核心使命是推动游戏行业的技术创新与工程进步。指南明确了五大核心研究方向：计算机图形学与渲染技术、游戏引擎与架构设计、网络与多人游戏技术、人工智能与内容生成、以及性能优化与质量保证。所有研究需遵循严格的工程技术规范，包括清晰的技术论文结构、规范的代码与数据展示，以及强调方案的可复现性与实际验证。评审将依据技术创新性、工程实用性、方案完整性、评估严谨性与写作清晰度五个维度进行，特别重视量化数据支撑与实际应用价值。本版块不接受纯理论探讨或无工程验证的方案，鼓励来自产业一线的技术实践、开源项目分析及解决行业真实痛点的创新工作。最终目标是搭建连接学术研究与产业实践的桥梁，以扎实的工程智慧共同塑造游戏技术的未来。",
+    "nowbasedoi": "9DB9822DD3",
+    "published": "2026-01-08T00:56:12.373029"
+  },
+  {
+    "id": 25,
+    "title": "针对基于Windows NT 6.2+内核系统的经典游戏兼容性自动化解决方案——以《红色警戒2》为例",
+    "authors": [
+      "elegantPlant",
+      "huoji120"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "《命令与征服：红色警戒2》",
+      "DX3D",
+      "Windows操作系统",
+      "启动器"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E9%92%88%E5%AF%B9%E5%9F%BA%E4%BA%8EWindows%20NT%206.2+%E5%86%85%E6%A0%B8%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%8F%E5%85%B8%E6%B8%B8%E6%88%8F%E5%85%BC%E5%AE%B9%E6%80%A7%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E2%80%94%E2%80%94%E4%BB%A5%E3%80%8A%E7%BA%A2%E8%89%B2%E8%AD%A6%E6%88%922%E3%80%8B%E4%B8%BA%E4%BE%8B.pdf",
+    "specialNote": null,
+    "abstract": "本文针对经典即时战略游戏《命令与征服：红色警戒2》在Windows10／11系统上的兼容性问题，设计并实现了一款智能化启动工具。该工具通过动态管理系统DirectX3D硬件加速状态、自动配置游戏兼容性模式、优化视频参数设置，并结合进程监控机制，实现了游戏在新系统上的稳定运行。实验表明，该启动器在多种Windows10版本（21H2、22H2）上均能有效解决画面渲染异常、游戏闪退等问题，成功率达99％。本文详细阐述了工具的设计原理、关键技术实现及测试验证过程，为经典游戏在新平台上的兼容性适配提供了可复用的工程解决方案。",
+    "nowbasedoi": "1136B0F795",
+    "published": "2026-01-14T21:50:51.713129"
+  },
+  {
+    "id": 26,
+    "title": "GPU 并行计算在游戏引擎中的集成与应用： 基于CUDA 架构的系统性综述",
+    "authors": [
+      "TonyChen",
+      "copycat666",
+      "doro"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "游戏引擎",
+      "GPU并行计算",
+      "CUDA",
+      "实时光线追踪",
+      "物理模拟",
+      "人工智能渲染",
+      "异构计算"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/GPU%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E%E4%B8%AD%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E5%BA%94%E7%94%A8%EF%BC%9A%E5%9F%BA%E4%BA%8ECUDA%E6%9E%B6%E6%9E%84%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E7%BB%BC%E8%BF%B0.pdf",
+    "specialNote": "本研究由 NVIDIA Corporation (US) 提供支持。",
+    "abstract": "随着实时渲染与交互应用对计算需求的日益增长，通用图形处理器（GPGPU）并行计算已成为现代游戏引擎实现高真实感图形与复杂物理仿真的关键技术。本文聚焦于NVIDIACUDA（ComputeUnifiedDeviceArchitecture）在游戏引擎中的集成架构与应用范式，系统性地综述了其核心技术原理、主流引擎中的实现模型、性能优化策略及跨平台兼容方案。首先，分析了游戏引擎在实时光线追踪、物理模拟、人工智能增强渲染等领域对GPU并行计算的需求演进；其次，深入探讨了CUDA在UnrealEngine、Unity等主流引擎中的模块化集成方案与异步计算框架；接着，评估了CUDA在内存访问优化、线程调度、与图形管线协同等方面的性能瓶颈与解决路径；最后，展望了CUDA在神经渲染、异构计算架构及云原生游戏引擎中的未来研究方向。本文旨在为游戏引擎架构设计、实时图形学算法优化及相关领域研究提供技术参考与理论依据。",
+    "nowbasedoi": "4DA1C4F459",
+    "published": "2026-01-16T21:49:26.760141"
+  },
+  {
+    "id": 27,
+    "title": "红星、废墟与低语：电子游戏中的苏联视觉政治与听觉景观",
+    "authors": [
+      "AdaNIL"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "电子游戏",
+      "苏联",
+      "意识形态",
+      "游戏考古"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E7%BA%A2%E6%98%9F%E3%80%81%E5%BA%9F%E5%A2%9F%E4%B8%8E%E4%BD%8E%E8%AF%AD%EF%BC%9A%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E4%B8%AD%E7%9A%84%E8%8B%8F%E8%81%94%E8%A7%86%E8%A7%89%E6%94%BF%E6%B2%BB%E4%B8%8E%E5%90%AC%E8%A7%89%E6%99%AF%E8%A7%82.pdf",
+    "specialNote": null,
+    "abstract": "电子游戏作为一种流行文化媒介，积极参与了对历史实体与政治概念的塑造与传播。本项研究以游戏中的苏联形象为具体对象，探讨其视觉与听觉符号系统如何构建出一种独特的＂数字苏联＂想象。研究聚焦于＂红星＂、＂废墟＂等核心视觉符号的意识形态隐喻，以及俄语配音、改编音乐等声音景观所营造的异域感与历史氛围，分析其背后蕴含的视觉政治与感官叙事策略。本文通过对多类型代表性游戏（如《使命召唤》《地铁》《钢铁雄心》《Papers，Please》等）的案例考察，本文揭示了游戏表征中存在的几种主导范式：西方游戏常将苏联简化为冷战的＂他者＂与威胁象征，延续了特定的意识形态框架；而后苏联国家及部分独立游戏则呈现出更复杂的创伤记忆或批判性怀旧。研究同时指出，游戏机制与玩家互动本身亦是意义生产的关键环节，策略游戏中的操作逻辑与射击游戏中的角色体验，都在无形中强化或颠覆着既定的叙事。本文认为，游戏中的苏联形象是一个流动的、多义的文化场域，它既受制于全球市场下的历史简化与刻板印象，也为理解该历史时期提供了具身化的、情感性的介入路径。最终，本研究旨在为审视流行文化中的历史再现、政治隐喻与集体记忆构建，提供一个基于媒介特性的批判性分析视角。",
+    "nowbasedoi": "7A42D5EA6B",
+    "published": "2026-01-29T00:26:46.467665"
+  },
+  {
+    "id": 28,
+    "title": "兵棋推演的核心理论与计算框架演进脉络",
+    "authors": [
+      "米哈伊尔设计局"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "兵棋推演",
+      "建模范式",
+      "博弈论",
+      "多智能体系统",
+      "强化学习"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/%E5%85%B5%E6%A3%8B%E6%8E%A8%E6%BC%94%E7%9A%84%E6%A0%B8%E5%BF%83%E7%90%86%E8%AE%BA%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%A1%86%E6%9E%B6%E6%BC%94%E8%BF%9B%E8%84%89%E7%BB%9C.pdf",
+    "specialNote": null,
+    "abstract": "兵棋推演已从传统的经验性战争游戏，演进为一门基于严格数学与计算理论的决策模拟科学。本文旨在系统梳理这一演进的核心理论脉络与计算框架转型。文章首先将兵棋推演重新界定为一个形式化的多主体决策模拟系统，其内核在于对不确定性对抗过程进行结构化建模。随后，综述聚焦于支撑该系统的四大理论范式－博弈论、决策理论、系统动力学与运筹学，并深人剖析了其实现中标志性的数学模型演进路径：从描述宏观损耗规律的兰彻斯特微分方程，到刻画序贯随机决策的马尔可夫决策过程，再到模拟微观交互与复杂涌现的多智能体模型。本文进而探讨了人工智能如何作为强大的计算范式融人该领域，特别是强化学习在求解高维策略空间、生成式模型在构建想定与模拟对手方面带来的范式革新。最后，本文指出当前的核心挑战在于多范式模型的整合、计算结果的验证与解释，以及人机协同决策的理论构建。本文认为，兵棋推演的未来发展，关键在于构建一个融合形式化逻辑、可计算模型与人类认知的混合智能模拟理论框架，从而在高度复杂的决策环境中，为探索＂如果．．．将会怎样＂提供更强大的科学实验室。",
+    "nowbasedoi": "E692E22EB3",
+    "published": "2026-01-29T00:27:07.719429"
+  },
+  {
+    "id": 29,
+    "title": "What Is NVIDIA DLSS and How Does It Evolve",
+    "authors": [
+      "copycat666"
+    ],
+    "issue": "电子游戏科学与技术 第一卷",
+    "keywords": [
+      "AI超采样",
+      "时空反馈",
+      "帧生成",
+      "光线重建"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume1/What%20Is%20NVIDIA%20DLSS%20and%20How%20Does%20It%20Evolve.pdf",
+    "specialNote": null,
+    "abstract": "本文聚焦于NVIDIA DLSS（深度学习超级采样）技术的演进历程。从初代基于特定超分辨率的解决方案，到DLSS2．0引入通用神经网络模型实现画质与性能的飞跃，再到集成光学多帧生成的DLSS3及其后续迭代，本次演讲将系统剖析DLSS各代核心技术原理的突破、画质与性能的显著提升，以及其如何逐步重塑实时图形渲染的范式。",
+    "nowbasedoi": "809FCE09A0",
+    "published": "2026-01-29T00:27:10.259643"
+  },
+  {
+    "id": 30,
+    "bestpaperaward": true,
+    "title": "Rating 3.0: A Player Skill Assessment System Integrating Ensemble Learning and Pairwise Comparison Theory for Counter-Strike 2",
+    "authors": [
+      "ubi_potato",
+      "Gentaro Yokohiro",
+      "blvd",
+      "anonymous"
+    ],
+    "level": null,
+    "issue": "ICEST 2026 会议论文集",
+    "keywords": [
+      "Counter-Strike2",
+      "HLTV Rating",
+      "Machine Learning",
+      "Player Skills"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/icest/conference_001.pdf",
+    "specialNote": null,
+    "abstract": "This paper proposes CS2 Rating 3.0, an innovative player skill rating system for the first-person shooter Counter-Strike 2. To address the limitations of existing systems (e.g., Rating 2.0), which rely heavily on linear regression and inadequately capture complex in-game dynamics, our system introduces a novel dual-engine architecture. First, we develop a Feature Contribution Decomposition Module based on Gradient Boosting Decision Trees to extract non-linear features from highdimensional raw match data (e.g., positional heatmaps, economic impact, and cooperative efficiency). Second, we construct a Bayesian Pairwise Comparison Model as the core rating engine, framing each match as a stochastic game with incomplete information and updating player ratings via Approximate Bayesian Computation. Experiments on a professional match dataset demonstrate that CS2 Rating 3.0 significantly outperforms Rating 2.0 in ranking stability (improved by 15%), future win-rate prediction accuracy (improved by 22%), and sensitivity to cheating/abnormal behavior. The proposed system offers an explainable, robust, and theoretically grounded next-generation solution for competitive esports analytics.",
+    "nowbasedoi": "ICEST-2026-1-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 1
+  },
+  {
+    "id": 31,
+    "title": "Game Dynamics as Topological Field Theory: A Supersymmetric Framework for Emergent Worldbuilding",
+    "authors": [
+      "Hooin Kyoma",
+      "Christina Makise",
+      "copycat666",
+      "doro",
+      "mysteriousK"
+    ],
+    "level": null,
+    "issue": "ICEST 2026 会议论文集",
+    "keywords": [
+      "Stochastic Dynamical Systems",
+      "Supersymmetry",
+      "Topological Field Theory",
+      "Emergent Narrative",
+      "Game Design Theory"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/icest/conference_002.pdf",
+    "specialNote": null,
+    "abstract": "This paper proposes a foundational paradigm shift for the design of dynamic, emergent narrative and ecosystems in games. Moving beyond the prevailing phenomenological approaches of scripted branching and probabilistic tables, we argue that the design goal of a truly “lifelike” virtual world corresponds to the construction of a stochastic dynamical system with a specific topological and supersymmetric structure. We draw upon the Supersymmetric Theory of Stochastics (STS) – a body of mathematical physics demonstrating the equivalence between classical stochastic dynamics on manifolds and deterministic topological field theories – to furnish this new paradigm with a rigorous formal framework. Within this framework, the game state space is modeled as a base manifold, deterministic rules as a vector field, and stochastic elements (e.g., player input noise, procedural randomness) as (super)symmetrically coupled noise. STS reveals that the resulting stochastic game dynamics is governed by an underlying supersymmetric topological field theory. This translation yields profound design insights: narrative attractors (e.g., story endings) correspond to critical points of a Morse function or instanton solutions; major plot twists are modeled as noise-induced topological transitions between these attractors, whose probabilities are controlled by topological invariants. Phenomena like self-organized criticality (SOC) in ecosystems are reinterpreted as spontaneous supersymmetry breaking under specific boundary conditions, providing a principled method for generating power-law distributed in-game events. Furthermore, player-adaptive difficulty can be formalized as the continuous deformation of the dynamical vector field while preserving the topological stability of a “flow channel” attractor, leading to organic, non-disruptive adaptation. We outline the implications of this paradigm, discussing how it elevates game design from a craft to a discipline in dialogue with theoretical biology and complex systems science. We also confront the practical challenges, suggesting numerical lattice field theory methods as a viable path for implementation. Ultimately, this work does not advocate for rewriting game engines as quantum simulators, but for adopting a deep mathematical metaphor – where designers sculpt “potential landscapes” and “topological invariants” – from which rich, coherent, and profoundly emergent player experiences can deterministically, yet unpredictably, arise.",
+    "nowbasedoi": "ICEST-2026-2-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 2
+  },
+  {
+    "id": 32,
+    "title": "游戏如何“塑造”大脑?——电子游戏作为心理干预手段的神经科学基础",
+    "authors": [
+      "sophia_lee",
+      "甜菜根",
+      "kolmogorov"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "电子游戏",
+      "心理调控",
+      "脑科学",
+      "数字疗法",
+      "认知训练"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/%E6%B8%B8%E6%88%8F%E5%A6%82%E4%BD%95%E2%80%9C%E5%A1%91%E9%80%A0%E2%80%9D%E5%A4%A7%E8%84%91%E2%80%94%E2%80%94%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E4%BD%9C%E4%B8%BA%E5%BF%83%E7%90%86%E5%B9%B2%E9%A2%84%E6%89%8B%E6%AE%B5%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%A7%91%E5%AD%A6%E5%9F%BA%E7%A1%80.pdf",
+    "specialNote": null,
+    "abstract": "随着数字技术的飞速发展，电子游戏已超越娱乐范畴，成为心理学与脑科学研究的新兴领域。本文旨在系统综述电子游戏如何作为一种主动的心理调控工具，其背后的神经机制，以及在认知增强、情绪调节与精神疾病干预等方面的应用。文章首先梳理了电子游戏影响心理过程的脑科学基础，包括对神经网络\n可塑性、神经递质系统和脑功能连接的调控。进而，探讨了“严肃游戏”与“数字疗法”在注意力缺陷多动障碍（ADHD）、抑郁症、焦虑症及创伤后应激障碍（PTSD）等领域的临床实证研究。最后，本文分析了当前研究面临的挑战（如个体差异、成瘾风险、标准化不足），并展望了未来方向，包括闭环神经反馈游戏、\n人工智能个性化适配及元宇宙治疗场景的构建。本文认为，基于脑科学设计的电子游戏，有望成为高效、可及且个性化的新一代心理干预手段。",
+    "nowbasedoi": "HM-2-1-2026-R",
+    "doc_category": "R",
+    "edition": "HM",
+    "volume": 2,
+    "year": "2026",
+    "index": 1,
+    "published": "2026-02-07T00:46:44.912045"
+  },
+  {
+    "id": 33,
+    "bestpaperaward": true,
+    "title": "GeepSeek：基于CNN与蒙特卡洛树搜索的自对弈五子棋强化学习系统",
+    "authors": [
+      "jabberloop_is_killin",
+      "copycat666",
+      "doro",
+      "横原立花",
+      "铃木健太",
+      "山田優子",
+      "Weiming Zhang",
+      "Xiaoxiao Li",
+      "Fangchen Wang",
+      "Shuaiqi Chen",
+      "Fan Huang",
+      "Zhiqun Lin"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "五子棋",
+      "卷积神经网络",
+      "蒙特卡洛树搜索",
+      "强化学习",
+      "自对弈",
+      "轻量化架构"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/GeepSeek%EF%BC%9A%E5%9F%BA%E4%BA%8E%20CNN%20%E4%B8%8E%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B%E6%A0%91%E6%90%9C%E7%B4%A2%E7%9A%84%E8%87%AA%E5%AF%B9%E5%BC%88%E4%BA%94%E5%AD%90%E6%A3%8B%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F.pdf",
+    "specialNote": "本研究由日本五子棋社团和联盟提供专业数据与理论支持，以及国内多所高校五子棋协会协助完成人类对弈测试与数据收集。实验依托东北电力大学EigenLife机器学习实验室的计算资源与环境完成，并受到Nowledge Community的部分资助。",
+    "abstract": "本文提出 GeepSeek，一个基于卷积神经网络(CNN)与蒙特卡洛树搜索(MCTS)的轻量化自对弈强化学习系统，用于五子棋博弈。系统采用双头CNN架构，结合策略网络与价值网络，通过纯自我对弈进行训练，无需人类棋谱数据。在单GPU(NVIDIA RTX 4080)环境下训练48小时后，系统实现了基本战术能力，能够与传统的a-β剪枝搜索算法进行有效对弈。实验结果表明，该框架在有限计算资源下能够完成自对弈学习过程，并展现出从随机策略到基础战术的进化轨迹。本研究为在资源受限环境下探索AlphaZero类算法提供了可复现的实现案例，并分析了轻量化设计对学习效果的影响。",
+    "nowbasedoi": "ET-2-1-2026-R",
+    "doc_category": "R",
+    "edition": "ET",
+    "volume": 2,
+    "year": "2026",
+    "index": 1,
+    "published": "2026-02-11T03:18:34.183604"
+  },
+  {
+    "id": 34,
+    "bestpaperaward": true,
+    "title": "空容器：日式MMORPG 为何以西欧中世纪为幻想底板？",
+    "authors": [
+      "mika_queen",
+      "copycat666",
+      "Gina老师",
+      "hysteria"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "空容器",
+      "日式MMORPG",
+      "中世纪",
+      "数据库幻想",
+      "媒介考古",
+      "凯尔特文化",
+      "文化内化"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/%E7%A9%BA%E5%AE%B9%E5%99%A8%EF%BC%9A%E6%97%A5%E5%BC%8FMMORPG%E4%B8%BA%E4%BD%95%E4%BB%A5%E8%A5%BF%E6%AC%A7%E4%B8%AD%E4%B8%96%E7%BA%AA%E4%B8%BA%E5%B9%BB%E6%83%B3%E5%BA%95%E6%9D%BF%EF%BC%9F.pdf",
+    "specialNote": "这是一篇有BGM的论文，请从下方“附件”点击播放。",
+    "abstract": "日式 MMORPG（及广义日式奇幻）普遍以西欧中世纪、凯尔特神话为世界观基底，这一现象在日本文化语境中如此“自然”，以至于极少被作为问题提出。然而从文化地理学与媒介考古视角看，这是一个需要解释的反常：一个从未经历欧洲封建制度、与凯尔特民族毫无亲缘关系的东亚岛国，为何将“剑与魔法”“骑士与精灵”确立为自己幻想叙事的标准配置？本文提出“空容器”假说以回应此问题。通过媒介考古追溯从《龙与地下城》TRPG、早期欧美 CRPG 到 1986 年《勇者斗恶龙》与《罗德斯岛战记》的“双重奠基”谱系，揭示日式奇幻西化并非一次性模仿，而是清晰的传播—转译—固化链条。进而引入早稻田大学 ESCANDE Jessy 的“数据库幻想”理论，论证日本创作者处理的并非欧洲历史本身，而是一个由游戏/动漫/文学积累、解语境化的异文化符号库；凯尔特元素的高频出现并非文化偏好，而是 D&D 早期设定的“媒介遗产效应”。在此基础上，本文提出西欧中古在日本语境中是一个历史失重的符号系统——既无本土政治包袱，又具备全球流通的文化中性。这一“空容器”属性使其成为日本架空叙事最理想的表达工具。四十年后的今天，西幻设定已完成从“舶来品”到“日本母语”的身份内化，其证据是：当日式奇幻反向输出全球、当和风设定反而被标记为“文化回归”时，这套曾经外来的符号系统，早已成为日本创作者描绘自我想象的默认语言。",
+    "nowbasedoi": "HS-2-1-2026-R",
+    "doc_category": "R",
+    "edition": "HS",
+    "volume": 2,
+    "year": "2026",
+    "index": 1,
+    "exfile": "netease_411500136",
+    "exfann": "音频来源：网易云音乐。歌曲信息：《黄昏をつれて》（与黄昏结伴）by: 森下弘生。专辑：ファイアーエムブレム if オリジナルサウンドトラック(3DS游戏《火焰之纹章if》原声集)",
+    "published": "2026-03-02T21:57:10.917659"
+  },
+  {
+    "id": 35,
+    "title": "“红色稻草人”的数字化再生产——抨击美国电子游戏对共产主义阵营的污名化与文化侵略",
+    "authors": [
+      "copycat666",
+      "mika_queen",
+      "Gina老师",
+      "hysteria",
+      "doro",
+      "mysteriousK"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "红色稻草人",
+      "美国游戏",
+      "共产主义阵营",
+      "污名化",
+      "文化侵略"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/%E2%80%9C%E7%BA%A2%E8%89%B2%E7%A8%BB%E8%8D%89%E4%BA%BA%E2%80%9D%E7%9A%84%E6%95%B0%E5%AD%97%E5%8C%96%E5%86%8D%E7%94%9F%E4%BA%A7%E2%80%94%E2%80%94%E6%8A%A8%E5%87%BB%E7%BE%8E%E5%9B%BD%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E5%AF%B9%E5%85%B1%E4%BA%A7%E4%B8%BB%E4%B9%89%E9%98%B5%E8%90%A5%E7%9A%84%E6%B1%A1%E5%90%8D%E5%8C%96%E4%B8%8E%E6%96%87%E5%8C%96%E4%BE%B5%E7%95%A5.pdf",
+    "specialNote": null,
+    "abstract": "“红色稻草人”是美国电子游戏产业为共产主义阵营定制的符号替身:被虚构、被简化、被永久锁定在反派生态位上，只为在每一部叙事中被西方主角合法击倒。本文以这一隐喻为批判支点，对美国游戏产业长达三十年、覆盖数百款3A级产品的系统性污名化实践提起学术诉状。研究立场明确:这不是冷战遗绪，不是创作自由，不是商业逻辑，而是以娱乐为投送载体的文化侵略。在视觉层面，游戏通过色调政治与空间叙事，将红星编码为废墟、将社会主义建筑遗产钉死在“压迫感”的符号桩上，完成第一帧有罪推定;在叙事层面，游戏通过五副预制脸谱与生态位锁定，对共产主义者实施叙事层面的褫夺公权--他们从不被允许讲述自己的故事，只被借用来成就西方英雄的道德加冕。本文进一步击破“商业逻辑”“冷战遗产”“创作自由”三套辩护词，指认污名化再生产的核心病灶不是阴谋论式的“华盛顿授意”，而是一套不需要审查委员会的自动审查系统:产业激励结构天然奖励污名化、惩罚去污名化，创作者在“坏人更好卖”的商业理性中自觉完成了意识形态订单。但被污名者并非永远沉默。《原子之心》的美学复权与中国游戏出海的去污名化实践宣告:符号游击战已经打响。这不是请求西方“手下留情”，而是对定义权垄断的正面夺回。结论指出，美国电子游戏产业用代码浇筑了一座虚拟的柏林墙。本文的使命，是推倒这堵墙。",
+    "nowbasedoi": "PS-2-1-2026-N",
+    "doc_category": "N",
+    "edition": "PS",
+    "volume": 2,
+    "year": "2026",
+    "index": 1,
+    "published": "2026-02-25T15:29:54.075742"
+  },
+  {
+    "id": 36,
+    "title": "电子游戏科学与技术论文模板 (Microsoft Word)",
+    "authors": [
+      "doro"
+    ],
+    "level": null,
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "电子游戏科学与技术",
+      "论文格式",
+      "论文模板"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E8%AE%BA%E6%96%87%E6%A8%A1%E6%9D%BF%20(Microsoft%20Word).pdf",
+    "specialNote": null,
+    "abstract": "本文档是《电子游戏科学与技术》期刊的论文格式模板（Microsoft Word），请各位作者按照此模板进行论文撰写与排版。模板兼容Microsoft Word，WPS Office和Libre Office等办公软件，本文档自发布之日起正式成为本期刊的论文模板之一。",
+    "nowbasedoi": "TM-2-1-2026-R",
+    "doc_category": "R",
+    "edition": "TM",
+    "volume": 2,
+    "year": "2026",
+    "index": 1,
+    "published": "2026-02-21T05:14:22.983635"
+  },
+  {
+    "id": 37,
+    "title": "CPU和显卡到底要怎么搭配",
+    "authors": [
+      "tubrmYmca"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "CPU",
+      "显卡",
+      "GPU",
+      "木桶效应",
+      "硬件搭配"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/CPU和显卡到底要怎么搭配.pdf",
+    "specialNote": null,
+    "abstract": "在组装或升级电脑时，许多用户常常陷入困惑：是选个好的CPU配一般的显卡，还是把钱砸在显卡上？CPU与显卡究竟如何搭配才能避免性能浪费，又不会让钱包吃不消？本文从两者的工作原理入手，用通俗易懂的语言解析\"木桶效应\"在硬件搭配中的应用，并针对游戏、办公、专业创作等不同需求，提供了一套简单实用的搭配原则。无论您是DIY小白还是攒机爱好者，读完本文都能轻松找到属于自己的黄金组合。",
+    "nowbasedoi": "PS-2-2-2026-R",
+    "doc_category": "R",
+    "edition": "PS",
+    "volume": 2,
+    "year": "2026",
+    "index": 2,
+    "published": "2026-02-21T05:13:26.496461"
+  },
+  {
+    "id": 38,
+    "title": "电子竞技游戏的复杂度生成机制研究——以《CSGO》和《PUBG》为例",
+    "authors": [
+      "anonymous"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "电子竞技",
+      "游戏复杂度",
+      "复杂度生成"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/%E7%94%B5%E5%AD%90%E7%AB%9E%E6%8A%80%E6%B8%B8%E6%88%8F%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%94%9F%E6%88%90%E6%9C%BA%E5%88%B6%E7%A0%94%E7%A9%B6%E2%80%94%E2%80%94%E4%BB%A5%E3%80%8ACSGO%E3%80%8B%E5%92%8C%E3%80%8APUBG%E3%80%8B%E4%B8%BA%E4%BE%8B.pdf",
+    "specialNote": null,
+    "abstract": "游戏复杂度是理解电子竞技游戏设计逻辑的核心概念，但既有研究多停留于类型学的静态划分，未能深入探讨复杂度如何生成的动态机制。本文旨在构建一个分析电子竞技游戏复杂度生成机制的理论框架，探究底层设计参数如何影响并塑造复杂度的具体呈现形态。研究从击杀时间（TTK）、规则集特征、信息透明度、时间维度等关键变量入手，提出复杂度生成的两种典型路径：1. 规则提纯导向的涌现性生成； 2. 元素堆叠导向的结构性生成，并以此作为分析工具，对《反恐精英：全球攻势》（CS:GO）与《绝地求生》（PUBG）两款现象级作品进行比较研究。",
+    "nowbasedoi": "BS-2-1-2026-R",
+    "doc_category": "R",
+    "edition": "BS",
+    "volume": 2,
+    "year": "2026",
+    "index": 1,
+    "published": "2026-02-23T18:32:11.224932"
+  },
+  {
+    "id": 39,
+    "title": "基于深度强化学习的电子游戏竞技策略优化研究",
+    "authors": [
+      "jabberloop_is_killin"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "深度强化学习",
+      "电子竞技",
+      "游戏人工智能",
+      "策略优化",
+      "神经网络"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/基于深度强化学习的电子游戏竞技策略优化研究.pdf",
+    "specialNote": null,
+    "abstract": "随着电子游戏竞技产业的快速发展，人工智能技术在游戏策略优化中扮演着越来越重要的角色。本文提出了一种基于深度强化学习的游戏竞技策略优化方法，通过结合深度神经网络和强化学习算法，实现了在复杂游戏环境中的智能决策。实验结果表明，该方法在多个电子竞技游戏中均取得了优于传统方法的性能表现，为游戏人工智能的发展提供了新的思路。",
+    "nowbasedoi": "ET-2-2-2026-R",
+    "doc_category": "R",
+    "edition": "ET",
+    "volume": 2,
+    "year": "2026",
+    "index": 2,
+    "published": "2026-02-23T18:32:10.436534"
+  },
+  {
+    "id": 40,
+    "title": "黎曼度量约束下的地形曲面构造理论",
+    "authors": [
+      "XiaochuanSun"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "黎曼流形",
+      "度量张量",
+      "等距嵌入",
+      "变分法",
+      "高斯曲率",
+      "地形生成",
+      "偏微分方程"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/黎曼度量约束下的地形曲面构造理论.pdf",
+    "specialNote": null,
+    "abstract": "传统地形生成方法通常基于分形噪声、物理侵蚀模拟或过程式规则，缺乏对地形曲面内在几何结构的显式控制，导致生成结果在曲率一致性、可展性及整体几何约束方面存在局限性。本文从微分几何视角出发，将地形视为二维黎曼流形在三维欧氏空间R3中的等距嵌入问题，系统建立了基于黎曼流形约束的地形生成理论框架。首先，引入第一基本形式（度量张量）作为地形的内蕴几何描述，阐明地形曲面必须满足由预设度量诱导的Gauss-Codazzi可积性条件。其次，构造了包含度量偏差项和曲率正则化项的能量泛函，通过变分法导出曲面满足的Euler-Lagrange方程，将地形生成问题转化为受几何约束的四阶非线性偏微分方程 边值问题。进一步，分析了特殊地形特征（可展地形、侵蚀地貌、 山脊线）对应的度量约束与曲率条件，并探讨了Ricci 流与平均曲率流在目标曲率设计与坡度演化中的理论应用。本文工作为高保真地形建模提供了严格的几何理论基础，揭示了地形生成本质上是在度量约束下求解曲面嵌入的几何分析问题。",
+    "nowbasedoi": "BS-2-2-2026-R",
+    "doc_category": "R",
+    "edition": "BS",
+    "volume": 2,
+    "year": "2026",
+    "index": 2,
+    "published": "2026-02-23T18:43:40.350015"
+  },
+  {
+    "id": 41,
+    "title": "论电子游戏年龄标识制度的“中国道路”：怎么从“适龄提示”走向“游戏分级”？",
+    "authors": [
+      "Ling Hu",
+      "CunZhen Li",
+      "YunLong Guo",
+      "Zhenqi Liu"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "CADPA",
+      "游戏分级",
+      "适龄提示",
+      "年龄标识制度"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/%E8%AE%BA%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E5%B9%B4%E9%BE%84%E6%A0%87%E8%AF%86%E5%88%B6%E5%BA%A6%E7%9A%84%E2%80%9C%E4%B8%AD%E5%9B%BD%E9%81%93%E8%B7%AF%E2%80%9D%EF%BC%9A%E6%80%8E%E4%B9%88%E4%BB%8E%E2%80%9C%E9%80%82%E9%BE%84%E6%8F%90%E7%A4%BA%E2%80%9D%E8%B5%B0%E5%90%91%E2%80%9C%E6%B8%B8%E6%88%8F%E5%88%86%E7%BA%A7%E2%80%9D%EF%BC%9F.pdf",
+    "specialNote": null,
+    "abstract": "我国现行电子游戏年龄标识以2020年《网络游戏适龄提示》团体标准为核心，设置8+、12+、16+三个年龄段，但该体系无法律强制力、无18+等级，并非真正意义上的分级制度。2024年《未成年人网络保护条例》将适龄提示上升为法规要求，2025-2026年两会代表持续呼吁出台分级标准实施细则，地方立法探索亦已启动。本文认为，我国正从“行政审查主导的适龄提示”向“法治化、精细化的分级制度”演进。这一转型需走出一条以技术赋能、分类渐进、立法保障为特征的“中国道路”，在未成年人保护与内容多样性之间寻求平衡。",
+    "nowbasedoi": "SS-2-1-2026-N",
+    "doc_category": "N",
+    "edition": "SS",
+    "volume": 2,
+    "year": "2026",
+    "index": 1,
+    "published": "2026-02-23T21:14:38.796126"
+  },
+  {
+    "id": 42,
+    "title": "看“戒网瘾机构”乱象——当“爱好”被异化为“上瘾”，伤害的不只是孩子",
+    "authors": [
+      "如果我是红狼你会爱我吗",
+      "copycat666",
+      "风物之诗",
+      "厨神stan"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "戒网瘾机构",
+      "未成年人保护",
+      "教育异化",
+      "监管真空",
+      "游戏障碍"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/%E7%9C%8B%E6%88%92%E7%BD%91%E7%98%BE%E6%9C%BA%E6%9E%84%E4%B9%B1%E8%B1%A1%E2%80%94%E2%80%94%E5%BD%93%E7%88%B1%E5%A5%BD%E8%A2%AB%E5%BC%82%E5%8C%96%E4%B8%BA%E4%B8%8A%E7%98%BE%EF%BC%8C%E4%BC%A4%E5%AE%B3%E7%9A%84%E4%B8%8D%E5%8F%AA%E6%98%AF%E5%AD%A9%E5%AD%90.pdf",
+    "specialNote": null,
+    "abstract": "近年来，以“矫正网瘾”为名侵害未成年人的恶性案件屡禁不止，引发社会持续关注。这些机构利用家长对青少年网络使用的教育焦虑，将正常的好奇心与叛逆行为异化为精神障碍，通过概念偷换构建起暴利的灰色产业链。其所谓的“矫治”，实为非法拘禁与身心虐待，不仅违背医学伦理，更对受害者造成难以逆转的心理创伤。现行监管体系因机构身份漂白而面临“教育管不着、工商看不出”的执行困境。本文认为，破解“戒网瘾”乱象，需回归教育本源：一方面，监管部门应填补法律真空，铲除暴力机构的生存土壤；另一方面，家长需摒弃“甩锅式教育”，以科学的亲子沟通替代暴力外包。保护未成年人，必须守住“任何矫正都不能以牺牲身心健康为代价”的底线。",
+    "nowbasedoi": "SS-2-2-2026-N",
+    "doc_category": "N",
+    "edition": "SS",
+    "volume": 2,
+    "year": "2026",
+    "index": 2,
+    "published": "2026-02-24T15:50:07.044413"
+  },
+  {
+    "id": 43,
+    "title": "A Comprehensive Review of Game-Based RL: Using Digital Games\n as Multi-Agent Reinforcement Learning Environments",
+    "authors": [
+      "Sergei Betchkov",
+      "copycat666",
+      "jabberloop_is_killin"
+    ],
+    "issue": "ICEST 2026 会议论文集",
+    "keywords": [
+      "Game-Based Reinforcement Learning",
+      "Digital Game Environments",
+      "Deep Reinforcement Learning",
+      "Multi-Agents"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/icest/conference_003.pdf",
+    "specialNote": null,
+    "abstract": "The intersection of digital games and reinforcement learning (RL) has evolved from single-agent challenges into a dominant paradigm for studying multi-agent intelligence. This comprehensive review systematically examines the field of Game- Based Multi-Agent Reinforcement Learning (Game-MARL), positioning digital games as the premier testbeds for developing and evaluating algorithms that require coordination, competition, and strategic interaction among multiple learning agents. We first establish a taxonomy of multi-agent game environments, categorizing them by complexity (from cooperative to mixed-motivation scenarios), information structure (fully vs. partially observable), and communicative capacity. The review then traces the evolutionary trajectory of Game-MARL, from early zero-sum games to recent breakthroughs in complex team-play environments such as StarCraft II, Dota 2, and emerging open-world multiplayer sandboxes. We provide a comprehensive catalog of standardized benchmarks and platforms specifically designed for multi-agent research, analyzing their unique properties and suitability for different research questions. Core algorithmic challenges—including credit assignment, non-stationarity, scalability, and opponent modeling—are discussed within the context of game environments. Finally, we identify open problems and promising future directions, particularly the integration of large language models for human-AI collaboration and the potential for procedurally generated game worlds to test generalization in multi-agent systems. This review aims to serve as a foundational resource for researchers entering the field and a structured reference for those advancing the frontier of multi-agent intelligence through games.",
+    "nowbasedoi": "ICEST-2026-3-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 3
+  },
+  {
+    "id": 44,
+    "bestpaperaward": true,
+    "title": "空容器2.0：为何部分日式RPG及动漫中使用“咏叹调语言”？——以“梶浦语”和“塔语”为例",
+    "authors": [
+      "mika_queen",
+      "Yanqi Zhang",
+      "Hongyun Li",
+      "Gina老师",
+      "copycat666",
+      "hysteria"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "空容器",
+      "咏叹调语言",
+      "梶浦语",
+      "塔语（Hymmnos）",
+      "听觉符号",
+      "标记反转",
+      "泛化理论"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/空容器2.0：为何部分日式RPG及动漫中使用“咏叹调语言”？——以“梶浦语”和“塔语”为例.pdf",
+    "specialNote": "这是一篇有BGM的论文，请从下方“附件”点击播放。",
+    "abstract": "日式奇幻作品中存在一类特殊的语言现象——“咏叹调（aria）语言”：其听感近似欧洲语言但无实际语义，或虽具完整语法但功能高度专门化。本文在“空容器”理论框架下，将这一概念从视觉设定泛化至听觉/语言维度，考察咏叹调语言如何作为“语义失重”的符号容器，承载日本创作者的幻想叙事。通过追踪两个典型案例，揭示二者共同呈现“提取-简化-编码-重组”的四阶段加工轨迹：“梶浦语”（Kajiura-go）提取自意大利语/拉丁语的语音特征、舍弃语义负担，形成可跨作品调用的声音空容器；“塔语”（Hymmnos）虽具完整语法，但词汇高度集中于情感与魔法，语法服务于游戏机制，构成功能性完整语言。研究发现，咏叹调语言的“欧洲性”除了是对真实欧洲语言的模仿，也是对“欧洲感”的特征标签化；其跨作品迁移与粉丝二创虽已启动符号自治化进程，但与视觉维度的无标记化相比，听觉维度的内化进度仍明显滞后——视觉早已成为母语，听觉仍部分停留在外语状态。本研究通过将“空容器”从视觉泛化至听觉，揭示日式奇幻的欧洲性是一套多模态但内化进度不均的符号系统。",
+    "nowbasedoi": "HS-2-2-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 2,
+    "edition": "HS",
+    "volume": 2,
+    "exfile": "netease_590252",
+    "exfann": "音频来源：网易云音乐。歌曲信息：《Sis puella magica!》（成为魔法少女吧！）by: 梶浦由記，伊東えり。专辑：魔法少女まどか☆マギカ オリジナルサウンドトラックVol.1(魔法少女小圆 原声集1)",
+    "published": "2026-03-02T20:08:53.345183"
+  },
+  {
+    "id": 45,
+    "bestpaperaward": true,
+    "title": "空容器3.0：东方Project 为何成为同人创作的“元容器”？",
+    "authors": [
+      "mika_queen",
+      "Yanqi Zhang",
+      "Hongyun Li",
+      "Gina老师",
+      "copycat666",
+      "hysteria"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "空容器",
+      "元容器",
+      "东方Project",
+      "魂音泉",
+      "二次创作",
+      "同人文化"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/空容器3.0：东方Project为何成为同人创作的“元容器”？.pdf",
+    "specialNote": "这是一篇有BGM的论文，请从下方“附件”点击播放。",
+    "abstract": "本研究在“空容器”理论框架下，将分析对象从符号层（视觉/听觉）提升至元规则层，考察东方Project何以成为同人创作的“理想容器”。通过追踪东方Project二次创作生态的形成机制，本文提出“元容器”概念：ZUN提供的不是一套可供填充的符号系统，而是一套关于“如何创作”的规则系统——二次创作规约、设定留白策略、符号的模块化设计。这套元规则在“提取-简化-编码-重组”的四阶段加工后，形成了一种“权限失重”的创作场域：官方主动让渡解释权垄断，使二次创作从“被容忍的边缘行为”转化为“被期待的参与方式”。本文以音乐二创与画作二创为双案例展开分析。音乐维度聚焦同人社团魂音泉——其以Hip-hop这一与东方“最不搭”的风格，成功转化为“听起来就很东方”的存在，揭示了东方原曲作为“情感容器”的深层留白。画作维度则揭示：大量画师以东方角色为起点磨砺技艺，将“东方画风”内化为个人风格的基础语法，东方成为画师的“创作训练场”。两个案例共同证明：东方Project不仅是角色容器的提供者，更是创作者成长路径的塑造者。研究发现：东方Project的元容器与1.0/2.0的空容器形成三层递进结构——1.0装内容，2.0装情感，3.0装创作本身；其内化完成标志是“标记反转的元层次跃迁”：在东方社群中，二次创作已成为“无标记”的默认状态，官方设定反而需要被专门标记。本文通过将“空容器”理论从符号层拓展至元规则层，揭示同人创作生态的底层机制：东方Project的伟大之处，不在于它创造了多少角色，而在于它设计了一套让创作得以发生的规则。",
+    "nowbasedoi": "HS-2-3-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 3,
+    "published": "2026-03-04T05:00:54.324450",
+    "edition": "HS",
+    "volume": 2,
+    "exfile": "netease_472907",
+    "exfann": "音频来源：网易云音乐。歌曲信息：《芥川龙之介の河童》by: まらしぃ（触手猴）。专辑：《幻想游戯2~Museum of marasy》"
+  },
+  {
+    "id": 46,
+    "title": "中性利己动机下“动机-决策-规范”三元统一框架：可计算行为模型与跨场景应用范式",
+    "authors": [
+      "姚沛杰"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "中性利己动机",
+      "情境化当下主观最优",
+      "双轨制度",
+      "动机-决策-规范三元框架",
+      "可计算社会科学",
+      "行为决策模型",
+      "游戏NPC行为系统",
+      "跨场景应用"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/中性利己动机下“动机-决策-规范”三元统一框架可计算行为模型与跨场景应用范式.pdf",
+    "specialNote": "本文原始稿件《中性利己动力与双轨制度：社会学的统一性分析框架》已由作者本人上传至哲学社会科学预印本平台（PSSXiv）。DOI：10.12451/202508.02822；CSTR：32012.36.PSSXiv.202508.02822。本文著作权归作者所有。",
+    "abstract": "本文以中性利己动机为行为本源，锚定“动机对应中性利己动机、决策对应情境化当下主观最优、规范对应双轨制度”的核心逻辑，构建“动机-决策-规范”三元极简核心框架，并以此为基础搭建完整的可计算数学模型体系，实现了从底层行为逻辑到量化计算、从静态个体决策到动态社会系统演化的全链条覆盖。模型以三元框架为不变内核，通过插件化的模块设计与参数调整，同时适配三大核心应用场景：一是作为可计算社会科学的基础分析工具，解释个体行为与社会制度的双向互动；二是作为通用行为决策模型，完整刻画从日常选择到极端行为的全谱系人类决策逻辑；三是经轻量化改造后，可直接作为游戏NPC行为决策系统与游戏世界观动态演化模型的底层架构。本文明确了三元框架的核心逻辑链条、模型的公式化体系、跨场景适配路径，同时提出了分领域的可检验假设与实验设计方案，为社会学研究、行为决策分析、游戏AI设计提供了一套统一、可落地、可扩展的理论与量化工具。",
+    "nowbasedoi": "PS-2-3-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 3,
+    "published": "2026-03-07T06:11:14.672296",
+    "edition": "PS",
+    "volume": 2
+  },
+  {
+    "id": 47,
+    "title": "论注意力的混沌模型与现代人信息管理策略：从“三条手机线”到“单核主频”的认知进化——兼论如何为普通玩家守住注意力主权",
+    "authors": [
+      "浅蓝の晨歌～"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "混乱型概率",
+      "手机线",
+      "混沌理论",
+      "注意力管理",
+      "电子游戏",
+      "认知负荷"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/论注意力的混沌模型与现代人信息管理策略：从“三条手机线”到“单核主频”的认知进化——兼论如何为普通玩家守住注意力主权.pdf",
+    "specialNote": null,
+    "abstract": "本文基于“混乱型概率”理论，构建了“手机线”作为信息流的基本单位模型，系统探讨了多任务处理中的认知负荷演变规律。研究发现，当并行信息流达到三条时，系统进入“混沌边缘”，混乱源数量呈组合级数增长，导致认知过载与行为随机化。本文将这一模型类比为电子游戏中的“多线程操作”，并指出现代人的注意力困境恰如一个被迫进行“多线操作”的普通玩家——看似高效，实则濒临崩溃。在此基础上，本文进一步提出注意力提升与损耗减少的实操策略，核心结论为：注意力的高低不取决于同时处理多少任务，而取决于切换效率与单任务深度。最后，本文专辟一章，探讨了如何让普通电子游戏玩家也能运用此模型保护自身注意力主权。本文为理解数字时代的注意力危机提供了从理论到实践的系统框架。",
+    "nowbasedoi": "PS-2-4-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 4,
+    "published": "2026-03-08T08:27:30.850240",
+    "edition": "PS",
+    "volume": 2
+  },
+  {
+    "id": 48,
+    "title": "《Screeps：World》过程树对抗概论",
+    "authors": [
+      "江上木叶"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "编程类游戏",
+      "多人游戏",
+      "即时战略游戏",
+      "非对称",
+      "战术对抗策略"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/《Screeps：World》过程树对抗概论.pdf",
+    "specialNote": null,
+    "abstract": "本文基于一款编程类大型多人在线即时战略游戏的核心玩法，提出了一种非对称战术对抗策略，适用于此游戏中各个技术水平的玩家的领地进攻行动。",
+    "nowbasedoi": "ET-2-3-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 3,
+    "published": "2026-03-08T08:29:02.457498",
+    "edition": "ET",
+    "volume": 2
+  },
+  {
+    "id": 49,
+    "bestpaperaward": true,
+    "title": "空容器4.0：当日式奇幻文化“溢出”容器——论以电子游戏为载体的全球性文化输出",
+    "authors": [
+      "mika_queen",
+      "Yanqi Zhang",
+      "Hongyun Li",
+      "Gina老师",
+      "copycat666",
+      "hysteria"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "空容器",
+      "文化输出",
+      "文化溢出",
+      "日式奇幻",
+      "Re:从零开始的异世界生活"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/空容器4.0：当日式奇幻文化“溢出”容器——论以电子游戏为载体的全球性文化输出.pdf",
+    "specialNote": "“空容器”系列到此完结，撒花~ヽ(✿ﾟ▽ﾟ)ノ......谢谢大家！",
+    "abstract": "日式奇幻文化经过近四十年发展，已从“舶来品”内化为“母语”。如今，这套符号系统开始“溢出”容器，以电子游戏为载体向全球扩散。本研究在“空容器”理论框架下，将分析对象从输入端的符号加工转向输出端的全球流动，提出“文化溢出”概念——与主动的“文化输出”不同，“溢出”强调容器饱满后的不可控扩散。以《Re:从零开始的异世界生活》及其游戏矩阵为案例，考察日式奇幻如何通过多元载体实现全球传播，并分析海外玩家如何识别、简化、重组这套符号系统。研究发现：全球溢出的本质是符号的“二次空化”——源文化归属被稀释，符号转化为可供全球调用的“文化语法”。这一过程与1.0 的“历史失重”形成镜像：输入端是日本让欧洲符号变空，输出端是世界让日本符号再变空。",
+    "nowbasedoi": "HS-2-4-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 4,
+    "published": "2026-03-08T07:46:14.296903",
+    "edition": "HS",
+    "volume": 2,
+    "exfile": "netease_1964101508",
+    "exfann": "音频来源：网易云音乐。歌曲信息：《Believe in You》by: nonoc。出处：TV动画《Re:从零开始的异世界生活》 第2期后半部分 ED2"
+  },
+  {
+    "id": 50,
+    "title": "构筑型卡牌游戏流派形成机制与重复游玩价值研究",
+    "authors": [
+      "Sally Face"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "构筑型卡牌游戏",
+      "流派",
+      "重复游玩价值",
+      "游戏设计"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/构筑型卡牌游戏流派形成机制与重复游玩价值研究.pdf",
+    "specialNote": null,
+    "abstract": "随着电子游戏竞技产业的蓬勃发展，构筑型卡牌游戏凭借其独特的策略深度，在策略类游戏中占据了重要地位。本文以《万智牌》、《炉石传说》与《杀戮尖塔》为主要案例，深入探讨了构筑型卡牌游戏的核心魅力——重复游玩价值，并指出其关键衡量标尺在于游戏内流派的形成与发展。研究从产业逻辑与玩家心理动机双重视角出发，分析了“地沟油卡组”存在的深层原因，揭示了玩家追求非预期性胜利、认知优越感、信息不对称优势及社会影响力等非功利性动机。最终，本文从设计层面提出了包括制定外层构筑规则、预留数值余地、增加离散型卡牌、规避重复性设计、设计通用组件牌及引入可决策随机性在内的六项关键策略，旨在为构筑型卡牌游戏的差异化流派设计与长线活力维持提供理论参考与实践路径。",
+    "nowbasedoi": "SS-2-3-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 3,
+    "published": "2026-03-09T15:05:47.580016",
+    "edition": "SS",
+    "volume": 2
+  },
+  {
+    "id": 51,
+    "title": "对王者荣耀元歌的装备分析与分路选择随版本变化而演变的综合分析",
+    "authors": [
+      "一只普通橙子"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "电子游戏科学与技术",
+      "手游",
+      "王者荣耀",
+      "元歌",
+      "对抗路"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/对王者荣耀元歌的装备分析与分路选择随版本变化而演变的综合分析.pdf",
+    "specialNote": null,
+    "abstract": "本文依版本与时间顺序整理不同版本对元歌的关键调整和主流以及非主流的出装与分路选择思路，分析其联系和关系，以此考察元歌玩家对版本的适应性和依据自身英雄理解所产生的打法思路创造，意图通过考察历史从而从历史走向现在加深当今元歌玩家对现版本的游戏理解，并且细致分析不同装备的改动和分路变化对打法思路的全面影响。",
+    "nowbasedoi": "PS-2-5-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 5,
+    "published": "2026-03-11T20:02:16.171975",
+    "edition": "PS",
+    "volume": 2
+  },
+  {
+    "id": 52,
+    "title": "VAE-WSDE-Net: A Net-Load Forecasting Model for PV-ESS-Powered Game Data Centers via Manifold Learning",
+    "authors": [
+      "copycat666"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "Uncertainty Prediction",
+      "Net-Load Forecasting",
+      "Game Data Center",
+      "Photovoltaic",
+      "Manifold Learning",
+      "Stochastic Differential Equation(SDE)"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/VAE-WSDE-Net A Net-Load Forecasting Model for PV-ESS-Powered Game Data Centers via Manifold Learning.pdf",
+    "specialNote": null,
+    "abstract": "The exponential growth of digital entertainment and cloud gaming has made game data centers significant energy consumers, posing challenges to both operational costs and environmental sustainability. Integrating photovoltaic (PV) systems and battery energy storage systems (ESS) into data center microgrids is a promising solution. However, the inherent uncertainty of PV generation, coupled with fluctuating data center workloads, makes reliable power management difficult. Conventional forecasting methods often fail to provide reliable prediction intervals under complex scenarios like rapid workload changes or extreme weather. This limitation stems from their insufficient consideration of the underlying data physics. To address this, we propose the VAE-WSDE-Net model for net-load forecasting in PV-ESS-powered game data centers. First, a variational autoencoder (VAE) learns a meteorological-workload manifold from the data, establishing a foundation for physically consistent modeling. Then, we construct a WSDE-Net on this manifold. A key innovation is our tangential anisotropic noise injection mechanism, which aligns stochastic perturbations with the sensitivity of different physical features. This design provides more reliable prediction intervals. Additionally, we introduce a Wasserstein loss to resolve the gradient vanishing problem. Experimental results on real-world data demonstrate that our model achieves an average improvement of 38.1\\% in the Winkler Score over traditional methods, verifying its superior reliability and sharpness in net-load interval predictions.",
+    "nowbasedoi": "ET-2-4-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 4,
+    "published": "2026-03-18T20:09:52.221557",
+    "edition": "ET",
+    "volume": 2
+  },
+  {
+    "id": 53,
+    "title": "比汉帝国更长命的谋士：全球游戏想象中的诸葛亮",
+    "authors": [
+      "copycat666"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "keywords": [
+      "诸葛亮",
+      "电子游戏",
+      "文化符号",
+      "跨文化传播"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume2/比汉帝国更长命的谋士：全球游戏想象中的诸葛亮.pdf",
+    "specialNote": null,
+    "abstract": "诸葛亮，中国历史上最著名的谋士之一，病逝于公元234年。他效力的蜀汉政权，在他身后不到三十年便走向终结。然而，一千八百年后的今天，诸葛亮却以另一种方式“活”了下来——活在全球各地的电子游戏里。从日本光荣公司的《三国志》系列，到中国玩家熟悉的《王者荣耀》，再到欧美工作室的《全面战争：三国》，诸葛亮的身影跨越国界，出现在大大小小的屏幕上。他被塑造成智力满分的军师、掌控全局的法师、抽卡池里人人想要的稀有角色，甚至在某些游戏中经历了性别转换、时空穿越等大胆改编。本文试图走进这些游戏，看看诸葛亮在那里变成了什么样子。通过梳理他在不同国家、不同类型游戏中的形象，本文发现：尽管改编方式千差万别，但诸葛亮身上最核心的符号——极致的智慧和深沉的忠诚——始终被保留下来。这种跨越文化差异的共识，恰恰解释了他为何能超越具体的历史朝代，成为一个具有全球生命力的文化符号。",
+    "nowbasedoi": "HS-2-5-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 5,
+    "published": "2026-03-18T20:49:07.064776",
+    "edition": "HS",
+    "volume": 2,
+    "exfile": "netease_2022357170",
+    "exfann": "音频来源：网易云音乐"
+  },
+  {
+    "id": 54,
+    "title": "【白皮书】游戏+：电子游戏是超越边界的生产力——重塑计算科学、基础科研与人机交互的未来",
+    "authors": [
+      "copycat666",
+      "doro",
+      "jabberloop_is_killin"
+    ],
+    "issue": "电子游戏科学与技术 第二卷",
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/whitepaper/NC白皮书系列-游戏+：电子游戏是超越边界的生产力.pdf",
+    "specialNote": "本白皮书由Nowledge Community发布",
+    "abstract": "电子游戏正在经历一场深刻的身份变革。从早期被误解的娱乐媒介，到今天逐渐获得认可的科技引擎，这一转变背后有着坚实的技术演进逻辑。本白皮书试图系统梳理游戏在三大领域的变革性价值：在计算科学维度，游戏产业对图形渲染的极致追求催生了GPU技术的爆发式发展，为深度学习革命奠定了硬件基石；游戏引擎正从虚拟世界构建器进化为数字孪生底座，重塑工业仿真与智慧城市的技术范式。在基础科研维度，众包科学游戏如Foldit成功将人类空间认知能力转化为破解蛋白质折叠等NP难问题的生物计算资源；游戏环境成为通用人工智能的低成本训练场与能力测试平台；虚拟世界更构成了可控、可观测的社会科学实验室，开创继实验室与田野调查之后的``第三种研究范式''。在人机交互维度，游戏持续定义着新一代交互设备的标准与体验边界，从VR头显到脑机接口，游戏场景始终是技术成熟度的终极检验场。 本白皮书同时审视了游戏赋能科学面临的结构性挑战：娱乐性与科学性的目标错位、虚拟环境数据的可信度争议、产学研协作机制断裂，以及社会认知偏见造成的资源投入障碍。展望未来，游戏引擎将升格为通用科研基础设施，AI驱动的自适应科学游戏将实现玩家贡献与科研需求的无缝融合，游戏与科学的边界将趋于模糊，形成双向赋能的共生生态。",
+    "nowbasedoi": "WP-1-0-2026-I",
+    "doc_category": "I",
+    "year": "2026",
+    "index": 0,
+    "published": "2026-04-01T03:00:38.380423",
+    "edition": "WP",
+    "volume": 1,
+    "exfile": "https://gitee.com/copycat666/articles/raw/master/whitepaper/%E6%B8%B8%E6%88%8F+%EF%BC%9A%E7%94%B5%E5%AD%90%E6%B8%B8%E6%88%8F%E6%98%AF%E8%B6%85%E8%B6%8A%E8%BE%B9%E7%95%8C%E7%9A%84%E7%94%9F%E4%BA%A7%E5%8A%9B-%E9%A2%84%E5%8D%B0%E6%9C%AC.pdf",
+    "exfann": "此处可下载白皮书预印本（打印时成本更低）。"
+  },
+  {
+    "id": 55,
+    "title": "《王者荣耀》多段位对局经济时序数据集与基础算例：基于XGBoost-KDE的王者荣耀对局经济多尺度区间预测模型",
+    "authors": [
+      "copycat666",
+      "doro",
+      "mysteriousK",
+      "Gina老师",
+      "lubyanka_lover"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "王者荣耀",
+      "经济时序数据",
+      "多段位",
+      "MOBA 游戏"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/《王者荣耀》多段位对局经济时序数据集与基础算例：基于XGBoost-KDE的王者荣耀对局经济多尺度区间预测模型.pdf",
+    "specialNote": null,
+    "abstract": "本文构建并公开了《王者荣耀》多段位对局经济时序数据集。数据集包含2000(代表性样本)到429085(完整数据)局真实对局回放数据，覆盖青铜至王者段位，以分钟粒度记录团队经济、个体经济、经济来源构成及时序变化。统计分析与基线实验验证了数据集的有效性，并构建了基于极端梯度提升机(XGBoost)与核密度估计(KDE)的经济短/中/长期区间预测模型作为算例。该数据集可用于经济预测、发育策略学习、游戏平衡性分析等任务。",
+    "nowbasedoi": "ET-3-1-2026-D",
+    "doc_category": "D",
+    "year": "2026",
+    "index": 1,
+    "published": "2026-04-03T06:11:07.873066",
+    "edition": "ET",
+    "volume": 3,
+    "exfile": "https://gitee.com/copycat666/articles/blob/master/opensource/wzry_economy_dataset.json",
+    "exfann": "点击可下载代表性样本（2000对局）数据集。如需完整数据集请邮件联系作者。"
+  },
+  {
+    "id": 56,
+    "title": "电子游戏科学与技术论文模板 （LaTeX）",
+    "authors": [
+      "doro"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "电子游戏科学与技术",
+      "论文格式",
+      "论文模板",
+      "LaTeX"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/电子游戏科学与技术论文模板 （LaTeX）.pdf",
+    "specialNote": null,
+    "abstract": "本文档是《电子游戏科学与技术》期刊的论文格式模板（LaTeX），请各位作者按照此模板进行论文撰写与排版。本模板基于joest文档类开发，必须使用XeLaTeX编译，兼容Windows、macOS和Linux系统。本文档自发布之日起正式成为本期刊的论文模板之一。",
+    "nowbasedoi": "TM-3-1-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 1,
+    "published": "2026-04-03T23:36:46.724284",
+    "edition": "TM",
+    "volume": 3
+  },
+  {
+    "id": 57,
+    "title": "从“云”到“边缘”——电子游戏分布式计算架构的技术发展综述",
+    "authors": [
+      "copycat666",
+      "doro",
+      "mysteriousK",
+      "Chengjie Liu",
+      "Yizheng Gu",
+      "Yumei Liu"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "云计算",
+      "边缘计算",
+      "雾计算",
+      "云游戏",
+      "分布式架构",
+      "低延迟"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/从“云”到“边缘”——电子游戏分布式计算架构的技术发展综述.pdf",
+    "specialNote": null,
+    "abstract": "随着电子游戏在画质、交互复杂度与并发规模上的持续攀升，传统集中式云计算架构在网络延迟、带宽压力与服务可扩展性方面逐渐暴露出结构性局限。边缘计算与雾计算作为云计算的延伸范式，通过将计算与存储资源下沉至网络边缘，为云游戏、VR/AR及大型多人在线游戏等低延迟敏感场景提供了新的技术路径。本文系统综述了电子游戏分布式计算架构从云到边缘的技术演进历程。首先，梳理了云计算基础架构及其在游戏领域的应用现状，分析其在调度策略、安全机制与能效管理方面的核心成果与不足；其次，聚焦云游戏技术，从流量检测、QoS/QoE优化、渲染架构及延迟构成等维度总结了当前研究进展；再次，深入探讨边缘计算与雾计算在游戏场景中的介入方式，涵盖边缘节点架构、资源分配算法、5G融合部署及绿色计算等关键技术；在此基础上，进一步分析了分布式游戏服务器架构的演进，包括集群设计、分片策略、微服务化、Serverless计算及跨地域容灾等工程实践；最后，展望了云-边-端协同、6G通信、元宇宙集成等未来发展方向。本综述旨在为游戏开发者与分布式系统研究人员提供技术选型的系统性参考。",
+    "nowbasedoi": "ET-3-2-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 2,
+    "published": "2026-04-04T01:48:18.033177",
+    "edition": "ET",
+    "volume": 3
+  },
+  {
+    "id": 58,
+    "bestpaperaward": true,
+    "title": "Hanayome-Agent：融合方面级情感分析好感度系统的Galgame对话智能体",
+    "authors": [
+      "沙雅濑琉璃"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "方面级情感分析（ABSA）",
+      "大语言模型（LLM）",
+      "旮旯给木（Galgame）",
+      "好感度系统",
+      "对话智能体"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/Hanayome-Agent：融合方面级情感分析好感度系统的Galgame对话智能体.pdf",
+    "specialNote": null,
+    "abstract": "传统Galgame采用预编写分支对话与单维度好感度系统，难以响应玩家自由文本输入，且无法实现细腻的情感交互。针对这一问题，本文提出Hanayome-Agent——一种融合方面级情感分析（ABSA）与大语言模型的Galgame动态对话智能体。首先，构建了面向Galgame场景的多维度方面情感体系（6大类18个子类），并设计了情感强度量化模型。其次，提出基于BERT的轻量级ABSA模型，实现从玩家自由文本中抽取方面术语并分类情感极性，进而建立情感到多维好感度向量的映射机制（包含好感、信任、亲密、尊敬四个维度）。第三，设计了基于LLaMA/Qwen架构的好感度驱动对话生成框架，通过提示词编码将角色人格、好感度状态、情感记忆注入大语言模型，确保对话的角色一致性与情感连贯性。第四，实现了长期记忆管理模块，采用向量数据库存储对话历史，支持情感加权的语义检索。实验表明，本文提出的ABSA模型在自建Galgame情感数据集上达到86.8%的F1值，优于BERT-BASE（74.5%）和LCF-BERT（82.4%）。用户实验（N=60）显示，Hanayome-Agent在角色真实感（4.2/5.0）和沉浸感（4.0/5.0）上显著优于传统分支对话方案。在消费级GPU（RTX4060Ti（8GB））上，系统推理延迟控制在2.8秒内，满足实时交互需求。本研究为Galgame的智能化交互提供了可行的技术方案，对互动叙事游戏的情感计算具有参考价值。",
+    "nowbasedoi": "ET-3-3-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 3,
+    "published": "2026-04-06T05:18:05.386558",
+    "edition": "ET",
+    "volume": 3
+  },
+  {
+    "id": 59,
+    "title": "游戏迷因子(Gameme Factor)：基于指数衰减的作者贡献度评价模型",
+    "authors": [
+      "mysteriousK"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "游戏迷因子",
+      "作者贡献度",
+      "指数衰减",
+      "《电子游戏科学与技术》期刊"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/游戏迷因子(Gameme Factor)：基于指数衰减的作者贡献度评价模型.pdf",
+    "specialNote": null,
+    "abstract": "本文针对《电子游戏科学与技术》期刊的实际需求，提出了一种贡献度评价指标——游戏迷因子（GamemeFactor）。该模型采用指数衰减函数对作者顺位进行加权，综合最佳论文奖、全文长度与领域差异度等论文数据，通过对数变换与Sigmoid归一化将原始贡献分映射至稳定的数值区间。同时，本文设计了参数搜索机制与早停优化策略，以Kolmogorov-Smirnov检验统计量、偏度和峰度为优化目标，使作者贡献分布趋近标准正态分布。您可以前往https://journalofest.netlify.app/stat查看实际效果。",
+    "nowbasedoi": "BS-3-1-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 1,
+    "published": "2026-04-08T05:15:11.414350",
+    "edition": "BS",
+    "volume": 3
+  },
+  {
+    "id": 60,
+    "title": "前沿快讯：游戏研发生产智能化——从单点提效到全流程变革",
+    "authors": [
+      "陈曦"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "游戏研发",
+      "人工智能",
+      "AIGC",
+      "3D 生成",
+      "产业智能化"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/前沿快讯：游戏研发生产智能化——从单点提效到全流程变革.pdf",
+    "specialNote": null,
+    "abstract": "人工智能技术正在系统性地重构游戏产业的研发生产流程。本文基于2026年游戏开发者大会(GDC)的一手行业信息，系统梳理了游戏研发生产智能化的发展现状。研究发现，AI对游戏研发的赋能已从单点工具突破走向全流程管线集成，在3D资产生成、代码与测试、本地化翻译等环节均实现了显著的效率提升。其中，3D角色动画管线效率最高提升8倍，本地化成本降低约80%，自动化编程覆盖率已达98%。与此同时，行业也面临着AI生成内容质量控制、技术同质化等挑战。本文认为，未来游戏研发生产智能化的竞争将从“能否使用AI”转向“如何用好AI实现产品差异化”。",
+    "nowbasedoi": "ET-3-4-2026-L",
+    "doc_category": "L",
+    "year": "2026",
+    "index": 4,
+    "published": "2026-04-08T05:35:25.418455",
+    "edition": "ET",
+    "volume": 3
+  },
+  {
+    "id": 61,
+    "title": "GeepSeek-Actor：融合知识蒸馏与超参数自适应的轻量化强化学习系统",
+    "authors": [
+      "jabberloop_is_killin",
+      "copycat666",
+      "doro",
+      "mysteriousK"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "近端策略优化",
+      "知识蒸馏",
+      "超参数自适应",
+      "轻量化强化学习",
+      "Actor-Critic 架构",
+      "GeepSeek"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/GeepSeek-Actor：融合知识蒸馏与超参数自适应的轻量化强化学习系统.pdf",
+    "specialNote": null,
+    "abstract": "深度强化学习在连续控制任务中取得了显著成功，但主流算法（如近端策略优化，PPO）往往依赖大规模计算资源，限制了其在消费级硬件上的部署。本文提出GeepSeek-Actor，一个融合知识蒸馏与超参数自适应的轻量化强化学习系统，专为资源受限环境（如NVIDIARTX40506GB显存）优化设计。该系统采用双头Actor-Critic网络架构，通过共享特征提取层与正交初始化策略实现参数量压缩（约50K-100K）。在知识蒸馏模块中，引入预训练教师模型，通过温度软化与KL散度损失指导学生网络高效学习；在超参数自适应机制中，设计基于PID控制的熵系数自适应与基于KL散度的学习率自适应规则，提升训练稳定性与收敛速度。在GymnasiumLunarLander-v3连续控制任务上的实验表明，GeepSeek-Actor在仅20万总参数量下，训练速度提升30%+，最终奖励达到235分，显著优于基线PPO实现（200分）。消融实验验证了知识蒸馏与超参数自适应各自的贡献及其协同增益效应。本文为在有限计算资源下部署高性能强化学习系统提供了可复现的工程范式。",
+    "nowbasedoi": "ET-3-5-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 5,
+    "published": "2026-04-16T19:36:34.072031",
+    "edition": "ET",
+    "volume": 3
+  },
+  {
+    "id": 62,
+    "title": "“不是每个学生都能成为职业选手”——电子竞技职业教育的分流困境与生态化培养路径研究",
+    "authors": [
+      "tyliu"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "电子竞技职业教育",
+      "分流困境",
+      "冠军叙事",
+      "产业底座",
+      "生态化培养模式"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/“不是每个学生都能成为职业选手”——电子竞技职业教育的分流困境与生态化培养路径研究.pdf",
+    "specialNote": null,
+    "abstract": "电子竞技职业教育在产业扩张背景下迅速发展，但“成为职业选手”的成功叙事与不足1%的职业转化率之间形成了结构性矛盾。本研究基于对主流招聘平台及电竞垂直社区的爬虫数据（N=2847份毕业生简历），系统分析了电竞专业“非职业选手”毕业生的实际就业流向。研究发现：超过82%的毕业生进入赛事执行、俱乐部运营、内容创作及数据分析等非竞技岗位，构成产业运转的“隐形底座”；然而，当前教育体系普遍存在的“冠军叙事”导向导致了人才培养与产业需求之间的结构性错配。本文据此提出“生态化培养模型”，主张电竞教育应从“选拔-淘汰”逻辑转向“培养-分流”逻辑，推动从“冠军摇篮”到“产业底座”的范式转型。",
+    "nowbasedoi": "EDU-3-1-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 1,
+    "published": "2026-04-16T20:33:41.660904",
+    "edition": "EDU",
+    "volume": 3
+  },
+  {
+    "id": 63,
+    "title": "今天，你“肝”了么？——量化游戏机制获利模式的“肝指数”（Gr-Index）和“氪指数”（Kr-Index）",
+    "authors": [
+      "mysteriousK",
+      "copycat666",
+      "doro"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "肝指数",
+      "氪指数",
+      "游戏获利模式",
+      "时间-金钱兑换",
+      "免费增值模式",
+      "游戏分类学"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/今天，你“肝”了么？——量化游戏机制获利模式的“肝指数”（Gr-Index）和“氪指数”（Kr-Index）.pdf",
+    "specialNote": null,
+    "abstract": "：“肝”与“氪”是当代电子游戏玩家社群中最核心的两个评价性黑话，分别指向时间投入与金钱投入，但既有研究缺乏一个可操作、可比较的量化框架。本文从统计学、机器学习、心理学与认知科学四个学科视角，提出肝指数（Gr-Index）与氪指数（Kr-Index）两个理论指标。在统计学层面，将“肝”操作化为频率、强度与衰减率三个子维度，将“氪”操作化为必要性、价格、弹性与透明度四个子维度，并给出形式化定义。在机器学习层面，讨论如何从行为日志中自动识别重复性任务、拟合衰减曲线并进行游戏分类。在心理学与认知科学层面，引入认知负荷、心流、双系统理论与损失厌恶，解释“客观肝度”与“主观肝感”的差异及玩家的决策偏差。基于两个指标，本文构建了肝-氪二维分类空间，提出“重肝轻氪”“重氪轻肝”“又肝又氪”“双低佛系”四种理想类型及可检验的理论假设。本文不声称完成实证测量，而是提供一个可扩展的理论框架，供后续研究使用、批判与完善。",
+    "nowbasedoi": "BS-3-2-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 2,
+    "published": "2026-04-20T12:38:11.567444",
+    "edition": "BS",
+    "volume": 3
+  },
+  {
+    "id": 64,
+    "title": "电竞选手营养学实践指南",
+    "authors": [
+      "sophia_lee"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "电子竞技",
+      "运动营养",
+      "认知功能",
+      "液体补充",
+      "膳食策略",
+      "咖啡因",
+      "肌酸"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/电竞选手营养学实践指南.pdf",
+    "specialNote": null,
+    "abstract": "电子竞技作为新兴的竞技体育项目，其选手的营养保障需求与传统运动员存在显著差异。本文系统整合了运动营养学、认知神经科学和竞技电竞领域的最新研究证据，从能量代谢特征、宏量营养素策略、微量营养素与认知增强、液体补充方案、补充剂循证应用以及训练与比赛周期的膳食安排六个方面，为电竞选手提供了一套完整的营养学实践指南。研究表明，电竞选手每日总能量消耗约为2500至3200千卡，其中大脑在高强度竞技状态下的葡萄糖消耗可较静息水平增加百分之三十至百分之五十。碳水化合物供能比例建议控制在百分之四十五至百分之五十五之间，蛋白质摄入量需达到每公斤体重每天1.4至1.8克，脂肪供能比例不宜超过百分之三十。咖啡因、L-茶氨酸、肌酸和omega-3脂肪酸是目前循证支持最为充分的认知功能增强营养素，而合理的液体补充策略对维持注意力和反应速度至关重要。本文还提供了训练日、比赛日和恢复期的具体膳食模板，并对常见补充剂的使用给出了分级推荐。全文旨在为电竞选手、教练团队和队医提供可操作的营养指导，同时为后续的专项研究指明方向。",
+    "nowbasedoi": "HM-3-1-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 1,
+    "published": "2026-04-20T12:39:41.769750",
+    "edition": "HM",
+    "volume": 3
+  },
+  {
+    "id": 65,
+    "title": "《千恋万花》同人小说：《穗织的约定》",
+    "authors": [
+      "弄臣の愚戏"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "小说",
+      "同人小说",
+      "《千恋万花》"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/《千恋万花》同人小说：《穗织的约定》.pdf",
+    "specialNote": "面向年龄：16+。未满16 周岁请勿阅读。",
+    "abstract": "本文为基于视觉小说游戏《千恋＊万花》（原作：柚子社/Yuzusoft）世界观及角色的二次创作同人小说，标题为《穗织的约定》，日文译名『桜花の約束』。本作品完全虚构，特此声明如下：本文未经原作版权方（柚子社/Yuzusoft）授权、监修或认可，不代表原作立场、设定或后续剧情走向。小说中出现的所有角色、地名、事件、对话、情感发展及结局，均为作者基于原作基础进行的虚构再创作。部分情节可能与原作存在差异，请以官方设定为准。本文为爱好者交流之目的免费发布，不涉及任何商业行为。作者未从中获取任何经济利益。本创作无意篡改、歪曲或替代原作世界观。若内容与原作产生冲突，一律以官方设定为准。故事中的刀术、神道、民俗等元素均为剧情需要而进行的艺术加工，不构成现实指导或宗教信仰建议。文中配图由ai生成（seedream4.0）。",
+    "nowbasedoi": "YSA-3-1-2026-M",
+    "doc_category": "M",
+    "year": "2026",
+    "index": 1,
+    "published": "2026-04-20T12:41:20.640834",
+    "edition": "YSA",
+    "volume": 3
+  },
+  {
+    "id": 66,
+    "title": "我国电子竞技俱乐部运营模式与发展路径简述",
+    "authors": [
+      "Gina老师"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "电子竞技俱乐部",
+      "运营模式",
+      "人才培养",
+      "商业化",
+      "可持续发展"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/我国电子竞技俱乐部运营模式与发展路径简述.pdf",
+    "specialNote": null,
+    "abstract": "中国电子竞技俱乐部作为数字体育产业的重要组成部分，近年来经历了从松散战队到专业化运营实体的快速转型。本研究系统考察了中国电竞俱乐部的发展现状，聚焦其演进历程、运营机制、人才管理体系及面临的核心挑战。基于政府政策文件、行业报道及公开资料的分析，本文梳理了俱乐部管理模式、收入结构的演变轨迹，以及政策监管框架对俱乐部运营的影响。研究发现，尽管头部俱乐部在专业化建设和品牌打造方面取得了显著进展，但行业整体仍面临盈利能力不足、人才供给短缺、政策不确定性等多重困境。结合各地电竞扶持政策的分析，本文提出了可持续发展的战略建议，包括完善治理结构、优化青训体系、深化与传统体育生态的融合等。研究旨在为电竞俱乐部管理者、产业投资者及政策制定者提供实践参考。",
+    "nowbasedoi": "SS-3-1-2026-N",
+    "doc_category": "N",
+    "year": "2026",
+    "index": 1,
+    "published": "2026-04-20T12:43:06.574038",
+    "edition": "SS",
+    "volume": 3
+  },
+  {
+    "id": 67,
+    "title": "2025年至今新游戏发布情况简报",
+    "authors": [
+      "Gina老师"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "新游戏",
+      "发布",
+      "电子游戏产业"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/2025年至今新游戏发布情况简报.pdf",
+    "specialNote": null,
+    "abstract": "2025年至2026年初，全球游戏市场迎来了一批重量级新作的集中发布，其中以拳头公司的产品矩阵最为引人注目。从《无畏契约》端手游的爆发式增长，到全新格斗游戏《2XKO》的正式亮相，再到《英雄联盟》衍生生态的持续拓展，拳头游戏在这一时期构建了覆盖射击、格斗、卡牌、策略、经营管理等多个品类的产品版图。与此同时，万代南梦宫等传统大厂也推出了《皇牌空战8》等续作。本文系统梳理了这一时期主要新游戏的上线情况、市场表现与电竞生态建设，为行业观察提供全景式参考。",
+    "nowbasedoi": "PS-3-1-2026-L",
+    "doc_category": "L",
+    "year": "2026",
+    "index": 1,
+    "published": "2026-04-20T12:44:22.692375",
+    "edition": "PS",
+    "volume": 3
+  },
+  {
+    "id": 68,
+    "title": "Elo评分系统的数学模型研究进展",
+    "authors": [
+      "mysteriousK"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "ELO 评分系统",
+      "配对比较模型",
+      "动态K值",
+      "多维能力",
+      "非传递性",
+      "贝叶斯推断"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/Elo评分系统的数学模型研究进展.pdf",
+    "specialNote": null,
+    "abstract": "Elo评分系统自1960年代由物理学家ArpadElo提出以来，已从国际象棋等级评定的专门工具，发展成为适应性学习、体育预测、人工智能评估乃至心理学比较研究中的核心算法框架。本文系统综述了Elo评分系统的数学模型及其近期理论进展。首先，本文给出了经典Elo模型的形式化定义，推导了其与Bradley-Terry模型及项目反应理论之间的数学等价关系。其次，从三个方向梳理了主要的模型扩展：动态K值模型通过自适应调整学习率参数，平衡了评分的稳定性与灵活性；多维Elo模型（MERS/MELO）将能力表示从一维标量扩展为多维向量，突破了传统模型的单维能力假设；随机过程扩展则将离散的胜负预测推广为连续的比分分布预测。再次，本文讨论了Elo模型的两个关键理论性质——马尔可夫收敛性与非传递性悖论，前者保证了评分系统的渐近行为可解释，后者揭示了循环克制关系下评分的根本失效机制。最后，本文概述了Elo模型在教育测评、大语言模型评估及心理学研究中的跨领域应用，并对未来研究方向进行了展望。",
+    "nowbasedoi": "BS-3-3-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 3,
+    "published": "2026-04-20T12:45:11.768123",
+    "edition": "BS",
+    "volume": 3
+  },
+  {
+    "id": 69,
+    "title": "电子竞技选手健康管理指南",
+    "authors": [
+      "sophia_lee"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "电子竞技",
+      "健康管理",
+      "职业选手",
+      "运动医学",
+      "心理健康",
+      "伤病预防"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/电子竞技选手健康管理指南.pdf",
+    "specialNote": null,
+    "abstract": "电子竞技作为一项快速发展的新兴体育业态，其职业选手的健康管理问题日益受到学术界与行业界的关注。与传统体育运动员相比，电竞选手面临着独特的健康挑战：长时间静态坐姿导致的肌肉骨骼疾病、高强度训练引发的视觉与神经系统疲劳、不规律作息造成的睡眠障碍、竞技压力催生的心理健康问题，以及久坐少动伴随的代谢功能紊乱。本指南基于2019年至2025年间发表的20篇核心文献，系统整合了电子竞技选手健康管理的循证证据，从生理健康、心理健康、训练管理、营养干预、人体工学及伤病预防六个维度，构建了面向电竞选手的全周期健康管理框架。本指南旨在为电竞俱乐部管理者、队医、教练员及选手本人提供可操作的实践指导，推动电子竞技行业的健康可持续发展。",
+    "nowbasedoi": "HM-3-2-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 2,
+    "published": "2026-04-20T12:46:13.603443",
+    "edition": "HM",
+    "volume": 3
+  },
+  {
+    "id": 70,
+    "title": "一种用于光伏储能游戏数据中心的光伏功率概率预测方法及系统",
+    "authors": [
+      "copycat666"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "光伏功率预测",
+      "光伏储能",
+      "概率预测",
+      "区间预测",
+      "游戏数据中心"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/一种用于光伏储能游戏数据中心的光伏功率概率预测方法及系统.pdf",
+    "specialNote": null,
+    "abstract": "本发明公开了一种用于光伏储能游戏数据中心的光伏功率概率预测方法及系统，属于光伏发电功率预测技术领域。本发明包括：首先，获取历史气象数据与光伏功率数据，进行数据预处理与划分；其次，通过密度峰值聚类将历史气象数据划分为若干典型聚类，生成软分配向量；然后，构建聚类条件引导的变分自编码器，学习气象-功率数据的低维流形结构，输出解耦的初始隐变量；接着，构建混合专家SDE-Net，包括DriftNet漂移网络和DiffNet扩散网络，其中DiffNet采用切向各向异性噪声注入机制，包含流形切向约束和特征重要性加权；采用Euler-Maruyama算法求解离散型随机微分方程，生成预测样本集合；最后，通过联合损失函数对模型进行训练，输出预测均值和预测区间。本发明通过流形学习和切向各向异性噪声注入机制，实现了物理一致性约束下的不确定性量化，显著提升了光伏功率概率预测的可靠性和锐度。",
+    "nowbasedoi": "ET-3-6-2026-S",
+    "doc_category": "S",
+    "year": "2026",
+    "index": 6,
+    "published": "2026-04-25T18:48:25.427737",
+    "edition": "ET",
+    "volume": 3
+  },
+  {
+    "id": 71,
+    "title": "为什么积分、徽章有时不管用？——说说游戏化教育里的指标失灵",
+    "authors": [
+      "tyliu"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "游戏化教育",
+      "古德哈特定律",
+      "指标失灵",
+      "积分激励",
+      "学习动机"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/为什么积分、徽章有时不管用？——说说游戏化教育里的指标失灵.pdf",
+    "specialNote": null,
+    "abstract": "游戏化教育通过积分、徽章、排行榜等游戏元素激励学习，在实践中广受青睐。然而，这些激励机制有时非但未能促进深度学习，反而催生了“刷分”、敷衍应付乃至作弊等异化行为，出现“指标失灵”的困境。本文引入古德哈特定律作为核心分析框架，系统梳理了游戏化教育中指标失灵的三种典型表现：选择性刷分、应试化倾向以及排行榜引发的竞争焦虑与作弊。在此基础上，文章提出四项改进思路：建立多元化评价体系、淡化横向排名强化自我比较、将积分奖励与学习深度挂钩、以叙事和角色替代冷冰冰的数字。本文认为，游戏化教育的关键不在于抛弃指标，而在于让指标回归工具本位，使其服务于学习本身而非取代学习。",
+    "nowbasedoi": "EDU-3-2-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 2,
+    "published": "2026-04-30T00:19:21.813465",
+    "edition": "EDU",
+    "volume": 3
+  },
+  {
+    "id": 72,
+    "title": "抽卡机制的鞅论分析",
+    "authors": [
+      "jabberloop_is_killin",
+      "mysteriousK"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "抽卡机制",
+      "鞅论",
+      "可选停止定理",
+      "条件风险值",
+      "保底规则",
+      "《原神》"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/抽卡机制的鞅论分析.pdf",
+    "specialNote": null,
+    "abstract": "抽卡机制作为现代电子游戏的核心变现模式，其数学结构引起了概率论与数理经济学领域的广泛关注。本文以鞅论为主要分析工具，对含保底规则的抽卡机制进行系统的概率性质分析。首先建立了含软保底与硬保底的抽卡过程形式化数学模型，推导了相应的马尔可夫链状态空间与转移概率。计算得到单次稀有物品获取所需抽取次数的期望为E[T]=(1-q^K)/p，方差为Var(T)=[q-(2K-1)q^K+(2K+1)q^(K+1)-q^2K]/p^2，其中p为基础概率，q=1-p，K为保底阈值。利用Doob可选停止定理，证明了保底机制下的净收益过程{R_n^((p))}是一个下鞅而非鞅，任何有限保底阈值都构成运营商对玩家的期望补贴，公平保底阈值仅在K→∞时达到。数值分析以《原神》角色祈愿系统（p=0.006，软保底自第74抽起线性递增至第90抽硬保底）为案例，计算得到单次五星角色获取的期望抽取次数约为62.5抽，方差约为793.8。引入条件风险值度量非酋玩家的尾部损失，在α=0.05置信水平下，CVaR_0.05 (T)≈83.2抽，尾部溢价为33%。敏感性分析表明，保底阈值每增加10，尾部溢价约增加0.13。本文的研究表明，保底机制虽然在期望意义上降低了玩家的平均花费，但将风险从运营商转移至玩家群体中的极端个体，CVaR可作为量化抽卡公平性的候选监管指标。",
+    "nowbasedoi": "BS-3-4-2026-R",
+    "doc_category": "R",
+    "year": "2026",
+    "index": 4,
+    "published": "2026-04-30T01:02:08.199089",
+    "edition": "BS",
+    "volume": 3
+  }
+]

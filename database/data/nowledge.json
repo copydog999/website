@@ -1,0 +1,185 @@
+[
+  {
+    "id": 1,
+    "name": "copycat666",
+    "position": "主编",
+    "institution": "东北电力大学",
+    "title": "计算机科学与技术 · 硕士",
+    "resfield": [
+      "新型电力系统",
+      "深度学习",
+      "物理信息神经网络",
+      "光伏时空概率预测",
+      "智能电竞信息技术",
+      "游戏与文化",
+      "游戏大数据挖掘"
+    ],
+    "bio": "东北电力大学计算机科学与技术专业硕士学位，哈尔滨工业大学能源科学与工程学院博士研究生在读，共发表学术论文8篇，发明专利一个。",
+    "papers": [
+      {
+        "title": "VAE-WSDE-Net: A Photovoltaic Power Uncertainty Prediction Model Based on Manifold Learning",
+        "conference": "The 29th International Conference on Computer Supported Cooperative Work in Design",
+        "year": 2026,
+        "doi": "(Waiting for publishment)"
+      },
+      {
+        "title": "Wind Power Curve Data Cleaning Model Based on LOF-ITSM",
+        "conference": "The Pacific Rim International Conference on Artificial Intelligence",
+        "year": 2026,
+        "doi": "(Waiting for publishment)"
+      },
+      {
+        "title": "A Probability Interval Prediction Method for PV Power Based on PInformer-HKDE",
+        "conference": "The 25th International Conference on Algorithms and Architectures for Parallel Processing",
+        "year": 2026,
+        "doi": "10.1007/978-981-95-8411-6_44"
+      },
+      {
+        "title": "Anomaly Detection in PV Power Plants Based on Improved Isolated Forest Approach",
+        "conference": "The 25th International Conference on Algorithms and Architectures for Parallel Processing",
+        "year": 2026,
+        "doi": "10.1007/978-981-95-8414-7_21"
+      },
+      {
+        "title": "Anomaly Detection Method for Photovoltaic Power Generation Data Based on IAT",
+        "conference": "The 25th International Conference on Algorithms and Architectures for Parallel Processing",
+        "year": 2026,
+        "doi": "10.1007/978-981-95-8411-6_29"
+      },
+      {
+        "title": "Aspect Term Extraction Method Based on EBERT-CBAC",
+        "conference": "The 25th International Conference on Algorithms and Architectures for Parallel Processing",
+        "year": 2026,
+        "doi": "10.1007/978-981-95-8405-5_25"
+      },
+      {
+        "title": "A Method for Recognizing Entities in Power News Texts Based on Dependency Syntactic Parsing",
+        "journal": "Journal of Advanced Computational Intelligence and Intelligent Informatics",
+        "year": 2025,
+        "doi": "10.20965/jaciii.2025.p1283"
+      },
+      {
+        "title": "Research on the Knowledge Representation Method of Power News Text Based on Time Hyperplane",
+        "journal": "Journal of Advanced Computational Intelligence and Intelligent Informatics",
+        "year": 2025,
+        "doi": "10.20965/jaciii.2025.p1369"
+      }
+    ],
+    "avatar_url": "data/avatar/copycat666.png",
+    "backgound_url": "data/avatar/copycat666background.jpg",
+    "h-index": 2
+  },
+  {
+    "id": 2,
+    "colorstyle": "pink",
+    "name": "doro",
+    "position": "主编",
+    "institution": "东北电力大学",
+    "title": "计算机科学与技术 · 硕士",
+    "resfield": [
+      "新型电力系统",
+      "风力发电与运维",
+      "深度学习",
+      "物理信息神经网络",
+      "轴承故障诊断",
+      "智能电竞信息技术",
+      "游戏与人工智能",
+      "游戏大数据挖掘"
+    ],
+    "bio": "东北电力大学计算机科学与技术专业硕士学位，哈尔滨工业大学能源科学与工程学院博士研究生在读，共发表学术论文3篇，发明专利2个。",
+    "papers": [
+      {
+        "title": "A Fault Diagnosis Model for Variable-Speed Gearboxes Based on Adaptive Wavelet Packet Transform and Bidirectional Gated Mamba",
+        "conference": "The 29th International Conference on Computer Supported Cooperative Work in Design",
+        "year": 2026,
+        "doi": "(Waiting for publishment)"
+      },
+      {
+        "title": "Anomaly Detection in PV Power Plants Based on Improved Isolated Forest Approach",
+        "conference": "The 25th International Conference on Algorithms and Architectures for Parallel Processing",
+        "year": 2026,
+        "doi": "10.1007/978-981-95-8414-7_21"
+      },
+      {
+        "title": "Aspect Term Extraction Method Based on EBERT-CBAC",
+        "conference": "The 25th International Conference on Algorithms and Architectures for Parallel Processing",
+        "year": 2026,
+        "doi": "10.1007/978-981-95-8405-5_25"
+      }
+    ],
+    "avatar_url": "data/avatar/doro.png",
+    "backgound_url": "data/avatar/dorobackground.jpg",
+    "h-index": 1
+  },
+  {
+    "id": 3,
+    "colorstyle": "blue",
+    "name": "mysteriousK",
+    "position": "副主编",
+    "institution": "东北电力大学",
+    "title": "信息与计算科学 · 学士",
+    "resfield": [
+      "运筹学与控制论",
+      "最优控制理论",
+      "数值优化方法",
+      "计算数学",
+      "MOBA与计算智能",
+      "作弊与反作弊技术"
+    ],
+    "bio": "东北电力大学信息与计算科学专业学士，长春理工大学光学硕士在读，共发表发明专利1篇",
+    "avatar_url": "data/avatar/mysteriousK.png",
+    "backgound_url": "data/avatar/mysteriousKbackground.jpg",
+    "h-index": 0
+  },
+  {
+    "id": 4,
+    "colorstyle": "orange",
+    "name": "Char1es",
+    "position": "副主编",
+    "institution": "成都理工大学",
+    "title": "管理学 · 学士",
+    "resfield": [
+      "电子竞技经济学",
+      "FPS游戏理论",
+      "游戏数据智能分析",
+      "CS:GO战术"
+    ],
+    "bio": "成都理工大学管理学专业学士，2019年完美世界高校联赛（PNL）成都理工大学队职业选手",
+    "avatar_url": "data/avatar/Char1es.png",
+    "backgound_url": "data/avatar/Char1esbackground.jpg",
+    "h-index": 0
+  },
+  {
+    "id": 5,
+    "colorstyle": "red",
+    "name": "CS2伯爵",
+    "position": "特邀专家",
+    "institution": "Bilibili弹幕视频网",
+    "title": "UP主",
+    "resfield": [
+      "Counter Strike 2"
+    ],
+    "bio": "B站知名UP主。B站个人主页：https://space.bilibili.com/209494262",
+    "avatar_url": "data/avatar/cs2bojue.png",
+    "backgound_url": "data/avatar/cs2bojuebackground.jpg",
+    "h-index": 0
+  },
+  {
+    "id": 6,
+    "colorstyle": "blue",
+    "name": "synp",
+    "position": "特邀专家",
+    "institution": "心动网络股份有限公司",
+    "title": "算法工程师",
+    "resfield": [
+      "游戏引擎技术",
+      "服务器负载均衡技术",
+      "游戏网络技术",
+      "数据挖掘"
+    ],
+    "bio": "游戏工业界算法工程师，在游戏网络技术、游戏引擎技术、数据挖掘技术等多个领域均具有专业水准。",
+    "avatar_url": "",
+    "backgound_url": "",
+    "h-index": 0
+  }
+]

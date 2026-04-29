@@ -1,0 +1,605 @@
+/* IEEE-style academic journal design */
+body {
+    font-family: 'Microsoft YaHei', 'Times New Roman', 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #f8f8f8 0%, #ffffff 100%);
+    overflow-x: hidden;
+}
+
+/* Header styling - IEEE style */
+header {
+    background: linear-gradient(135deg, #003C6B 0%, #00629B 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 5px solid #D36A00;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>');
+    opacity: 0.2;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #003C6B;
+    border-bottom: 2px solid #D36A00;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+h3 {
+    color: #00629B;
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+
+.section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    border-left: 4px solid #D36A00;
+    border-right: 1px solid #eee;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+.editor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.editor-card {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.editor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.editor-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00629B;
+    margin: 0 auto 15px;
+    background-color: #ddd;
+    display: block;
+}
+
+.editor-info {
+    font-size: 0.9em;
+}
+
+.editor-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.highlight {
+    color: #D36A00;
+    font-weight: bold;
+}
+
+footer {
+    background: linear-gradient(to bottom, #003C6B, #002147);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+footer a {
+    color: #FFCC00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.journal-logo {
+    max-width: 300px;
+    max-height: 150px;
+    margin: 0 auto 15px;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.journal-cover {
+    max-width: 100%;
+    max-height: 300px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+}
+
+/* IEEE-style buttons - 统一按钮系统 */
+.btn {
+    display: inline-block;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 5px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 按钮变体 */
+.btn-primary {
+    background-color: #D36A00;
+}
+.btn-primary:hover {
+    background-color: #b05800;
+}
+
+.btn-secondary {
+    background-color: #00629B;
+}
+.btn-secondary:hover {
+    background-color: #004470;
+}
+
+.btn-secondary-sm {
+    background-color: #00629B;
+    padding: 8px 15px;
+    font-size: 14px;
+    margin: 5px;
+}
+.btn-secondary-sm:hover {
+    background-color: #004470;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-gray {
+    background-color: #666666;
+}
+.btn-gray:hover {
+    background-color: #4d4d4d;
+}
+
+.btn-danger {
+    background-color: #8B0000;
+}
+.btn-danger:hover {
+    background-color: #6B0000;
+}
+
+/* 兼容旧类名（保留向后兼容） */
+.cta-button {
+    display: inline-block;
+    background-color: #D36A00;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 5px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #b05800;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button2 {
+    display: inline-block;
+    background-color: #00629B;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 5px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button2:hover {
+    background-color: #004470;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button2-small {
+    display: inline-block;
+    background-color: #00629B;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button2-small:hover {
+    background-color: #004470;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button3 {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 5px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button3:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-buttonreport {
+    display: inline-block;
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 5px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-buttonreport:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation styling */
+nav {
+    background-color: #003C6B;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    color: #FFCC00;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    max-width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #00629B;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* List styling */
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* IEEE-style paper abstract */
+.abstract {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 4px solid #00629B;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* IEEE-style keywords */
+.keywords {
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-left: 4px solid #D36A00;
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+/* Dual column layout */
+.main-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.left-content {
+    flex: 2;
+    min-width: 0;
+}
+
+.right-sidebar {
+    flex: 1;
+    min-width: 350px;
+    background: white;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    padding: 0;
+    height: fit-content;
+    min-height: 500px; /* 设置最小高度 */
+    max-height: 90vh; /* 增加最大高度 */
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 15px 20px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-content {
+    flex: 1;
+    min-height: 400px; /* 设置内容区最小高度 */
+    max-height: calc(90vh - 100px); /* 增加最大高度以容纳5个卡片 */
+    overflow-y: hidden; /* 隐藏滚动条 */
+    padding: 5px 20px 20px 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #00629B;
+    border-radius: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.paper-item {
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-left: 3px solid #D36A00;
+}
+
+.paper-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+.paper-meta {
+    color: #666;
+    font-size: 0.85em;
+    margin-bottom: 5px;
+}
+
+.paper-keywords {
+    color: #888;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.no-results {
+    text-align: center;
+    color: #D36A00;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.issue-header {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-left: 3px solid #00629B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.issue-header:hover {
+    background-color: #e0e0e0;
+}
+
+.issue-header h2 {
+    margin: 0;
+    color: #003C6B;
+    font-size: 1.2em;
+}
+
+.toggle-icon {
+    font-size: 1em;
+    color: #D36A00;
+}
+
+.issue-content, .issue-content-full {
+    padding: 10px 0 0 10px;
+    border-left: 1px dashed #ccc;
+    margin-left: 15px;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .right-sidebar {
+        max-height: none;
+        position: static;
+    }
+}
+
+/* Dropdown 下拉菜单样式 */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    z-index: 1000;
+    margin-top: 5px;
+}
+
+.dropdown-container.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-size: 0.9em;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+    color: #00629B;
+}

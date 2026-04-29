@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://journalofest.netlify.app/sitemap.xml

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "ra2launcher.zip",
+    "doi": "1136B0F795",
+    "download": "https://gitee.com/copycat666/articles/raw/master/opensource/ra2launcher.zip",
+    "publisher": "elegantPlant",
+    "description": "一种面向WinNT6.2+操作系统的红色警戒启动器",
+    "size": "62KB",
+    "updated": "2026/1/14"
+  },
+  {
+    "id": 2,
+    "name": "wzry_economy_dataset.json",
+    "doi": "ET-3-1-2026-D",
+    "download": "https://gitee.com/copycat666/articles/blob/master/opensource/wzry_economy_dataset.json",
+    "publisher": "copycat666",
+    "description": "《王者荣耀》多段位对局经济时序数据集（代表性样本）",
+    "size": "202MB",
+    "updated": "2026/4/3"
+  },
+    {
+    "id": 3,
+    "name": "geepseek.zip",
+    "doi": "ET-2-1-2026-R",
+    "download": "https://gitee.com/copycat666/articles/raw/master/opensource/geepseek.zip",
+    "publisher": "jabberloop_is_killin",
+    "description": "基于PyTorch开发的GeepSeek五子棋AI训练、测试、运行源代码，不包含权重文件",
+    "size": "55KB",
+    "updated": "2026/4/3"
+  },
+  {
+    "id": 4,
+    "name": "VAE-WSDE-Net",
+    "doi": "ET-2-4-2026-R",
+    "download": "https://gitee.com/copycat666/vae-wsde-net",
+    "publisher": "copycat666",
+    "description": "VAE-WSDE-Net：基于流形学习与随机微分方程网络的光伏功率区间预测方法",
+    "size": "（gitee repo）",
+    "updated": "2026/4/3"
+  },
+  {
+    "id": 5,
+    "name": "hanayome.zip",
+    "doi": "ET-3-3-2026-R",
+    "download": "https://gitee.com/copycat666/articles/raw/master/opensource/hanayome.zip",
+    "publisher": "沙雅濑琉璃",
+    "description": "基于LLM与方面级情感分析的Galgame对话框架（仅代码）",
+    "size": "28KB",
+    "updated": "2026/4/3"
+  },
+    {
+    "id": 5,
+    "name": "gameme_search.py",
+    "doi": "BS-3-1-2026-R",
+    "download": "https://gitee.com/copycat666/articles/raw/master/opensource/gameme_search.py",
+    "publisher": "mysteriousK",
+    "description": "游戏迷因子（Gameme Factor）计算模型",
+    "size": "16KB",
+    "updated": "2026/4/3"
+  }
+]

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>监督质询举报 - 电子游戏科学与技术</title>
+    <link rel="stylesheet" href="style/report.css">
+    <script src="script/utils.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>《电子游戏科学与技术》：专注于电子游戏的学术性刊物</h1>
+        <p>Journal of E-Gaming Science & Technology</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="releases.html">期刊阅览</a></li>
+            <li><a href="nowbase.html">NowBase 检索</a></li>
+            <li><a href="stat.html">游戏迷因子</a></li>
+            <li><a href="notifications.html">通知公告</a></li>
+            <li><a href="infos.html">监督平台</a></li>
+            <li><a href="opensource.html">开源</a></li>
+            <li><a href="bestpaper.html">最佳论文奖</a></li>
+            <li><a href="editorial.html">编辑委员会</a></li>
+        </ul>
+    </nav>
+    <div class="report-container">
+        <h1>监督质询举报平台</h1>
+        <p>请选择举报/质询类型并详细描述问题（*为必填项）：</p>
+        
+        <form id="reportForm">
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="misconduct" name="issueType" value="学术不端">
+                    <label for="misconduct">学术不端（抄袭、造假等）</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="funding" name="issueType" value="经费去向不明">
+                    <label for="funding">经费去向不明</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="review" name="issueType" value="黑箱审稿">
+                    <label for="review">黑箱审稿</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="harassment" name="issueType" value="人身攻击">
+                    <label for="harassment">人身攻击</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="other" name="issueType" value="其他问题">
+                    <label for="other">其他问题</label>
+                </div>
+            </div>
+            
+            <label for="details">具体情况说明*：</label>
+            <textarea id="details" name="details" required placeholder="请详细描述举报内容，包括涉及的文章、作者、具体行为及相关证据。如果有证据文件（图片，标注的文档等）请放在压缩包内，点击"提交举报"后作为邮件附件发送。"></textarea>
+            
+            <button type="button" class="submit-btn" onclick="submitReport()">提交举报</button>
+        </form>
+        
+        <div class="disclaimer">
+            <p><strong>注意事项：</strong></p>
+            <ul>
+                <li>所有举报内容将严格保密</li>
+                <li>举报内容由主编统一处理</li>
+                <li>请确保举报内容真实准确，恶意举报将承担相应责任</li>
+                <li>主编将在15个工作日内通过邮箱回复处理进展。处理结果会在<a href = "infos.html">监督、质询与信息公开平台</a>公示。</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script/report.js"></script>
+</body>
+</html>

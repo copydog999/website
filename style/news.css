@@ -1,0 +1,215 @@
+/* 新闻页面样式 - IEEE style */
+
+/* 新闻容器 */
+#newsContainer {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    min-height: 400px;
+}
+
+/* 暂无新闻提示 */
+.no-news {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 18px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #D36A00;
+    border-radius: 0;
+}
+
+/* 新闻卡片样式 */
+.news-item {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid #00629B;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left-color: #D36A00;
+}
+
+/* 新闻标题 */
+.news-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #003C6B;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+/* 新闻元信息 */
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.news-date {
+    color: #D36A00;
+    font-weight: bold;
+}
+
+.news-category {
+    background-color: #00629B;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 0;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* 新闻内容 */
+.news-content {
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Markdown 渲染内容样式 */
+.news-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.news-content th,
+.news-content td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.news-content th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.news-content tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.news-content pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-left: 3px solid #00629B;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.news-content code {
+    background-color: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.news-content blockquote {
+    border-left: 4px solid #D36A00;
+    padding-left: 20px;
+    margin: 20px 0;
+    color: #666;
+    font-style: italic;
+    background-color: #fffaf5;
+}
+
+.news-content h1,
+.news-content h2,
+.news-content h3,
+.news-content h4 {
+    color: #003C6B;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.news-content a {
+    color: #00629B;
+    text-decoration: underline;
+}
+
+/* 新闻摘要 */
+.news-excerpt {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* 阅读更多链接 */
+.read-more {
+    display: inline-block;
+    color: #00629B;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 1px solid #00629B;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #00629B;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 98, 155, 0.3);
+}
+
+/* 快速导航 */
+.quick-links {
+    padding: 10px;
+}
+
+.quick-link-item {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    color: #003C6B;
+    text-decoration: none;
+    border-left: 3px solid #D36A00;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.quick-link-item:hover {
+    background-color: #e8f4f8;
+    transform: translateX(5px);
+    border-left-color: #00629B;
+    box-shadow: 0 2px 8px rgba(0, 98, 155, 0.2);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .news-item {
+        padding: 20px 15px;
+    }
+    
+    .news-title {
+        font-size: 1.2em;
+    }
+    
+    .news-meta {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+}
