@@ -11,12 +11,12 @@
   },
   {
     "id": 2,
-    "name": "wzry_economy_dataset.json",
+    "name": "wzry_economy_dataset.zip",
     "doi": "ET-3-1-2026-D",
     "download": "https://gitee.com/copycat666/articles/blob/master/opensource/wzry_economy_dataset.json",
     "publisher": "copycat666",
     "description": "《王者荣耀》多段位对局经济时序数据集（代表性样本）",
-    "size": "202MB",
+    "size": "12MB",
     "updated": "2026/4/3"
   },
     {
