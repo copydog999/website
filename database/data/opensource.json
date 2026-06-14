@@ -13,7 +13,7 @@
     "id": 2,
     "name": "wzry_economy_dataset.zip",
     "doi": "ET-3-1-2026-D",
-    "download": "https://gitee.com/copycat666/articles/blob/master/opensource/wzry_economy_dataset.json",
+    "download": "https://gitee.com/copycat666/articles/blob/master/opensource/wzry_economy_dataset.zip",
     "publisher": "copycat666",
     "description": "《王者荣耀》多段位对局经济时序数据集（代表性样本）",
     "size": "12MB",
@@ -58,5 +58,15 @@
     "description": "游戏迷因子（Gameme Factor）计算模型",
     "size": "16KB",
     "updated": "2026/4/3"
+  },
+  {
+    "id": 6,
+    "name": "skinera_build.zip",
+    "doi": "ET-3-8-2026-D",
+    "download": "https://gitee.com/copycat666/articles/raw/master/opensource/skinera_build.zip",
+    "publisher": "copycat666",
+    "description": "Skin_Era数据集构建程序和基准算例",
+    "size": "21KB",
+    "updated": "2026/6/14"
   }
 ]

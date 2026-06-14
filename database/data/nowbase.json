@@ -2336,5 +2336,42 @@
       1106313,
       66574
     ]
+  },
+  {
+    "id": 81,
+    "title": "SKIN_ERA：CSGO/CS2饰品市场交易数据集（2013-2023）",
+    "authors": [
+      "copycat666",
+      "Char1es",
+      "doro",
+      "mysteriousK"
+    ],
+    "issue": "电子游戏科学与技术 第三卷",
+    "keywords": [
+      "CS:GO",
+      "CS2",
+      "饰品市场",
+      "虚拟资产",
+      "时间序列预测",
+      "LSTM",
+      "XGBoost",
+      "LightGBM"
+    ],
+    "filePath": "https://gitee.com/copycat666/articles/raw/master/volume3/SKIN_ERA：CSGO-CS2饰品市场交易数据集（2013-2023）.pdf",
+    "specialNote": null,
+    "abstract": "本文构建并公开了一个面向CS:GO/CS2饰品市场研究的多源时序数据集——SKIN_ERA。该数据集融合了Kaggle平台的Steam市场价格历史记录与CSGO-API项目的静态属性信息，包含20,575个独立饰品、34,615,938条价格记录，时间跨度从2013年4月至2023年5月，共计约10年。通过名称标准化算法，成功将11,924个饰品与稀有度、武器类型、磨损档位等静态属性关联，整体匹配率为58.0%。统计分析表明，饰品价格呈高度右偏分布（偏度7.54），0至20美元区间占总记录的85.4%；价格与成交量呈显著正相关（r=0.7026）；四象限分析揭示约34%的交易记录处于“高价低量”状态，反映了虚拟资产市场中存在的流动性风险。基于该数据集，本文开展了市场次日成交额预测的基准实验，对比了XGBoost、LightGBM、Random Forest、MLP和LSTM五种模型的性能。实验结果表明，LSTM取得了最优预测效果（MAE=453,841美元，R²=0.6268），验证了序列建模方法在虚拟资产预测任务中的优势；而MLP由于缺乏序列建模能力导致严重欠拟合（R²=-0.8935）。SKIN_ERA数据集可服务于政策冲击评估、市场有效性检验、虚拟资产定价因子分析、流动性风险管理以及机器学习算法验证等多个研究方向，为理解虚拟经济、评估政策冲击、检验市场理论提供了不可替代的数据支撑。数据集已公开发布。",
+    "nowbasedoi": "ET-3-8-2026-D",
+    "doc_category": "D",
+    "year": "2026",
+    "index": 8,
+    "published": "2026-06-14T19:58:30.726252",
+    "exfile": "https://gitee.com/copycat666/articles/raw/master/opensource/skinera_build.zip",
+    "exfann": "点击可下载数据集构建程序和基准算例",
+    "size": [
+      3138633,
+      19674
+    ],
+    "edition": "ET",
+    "volume": 3
   }
 ]
