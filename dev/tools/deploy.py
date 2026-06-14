@@ -36,7 +36,6 @@ def create_deploy_zip():
                 if part in excluded_folders:
                     should_exclude = True
                     break
-
             if should_exclude:
                 print(f"排除文件夹: {item.relative_to(project_dir)}")
                 continue

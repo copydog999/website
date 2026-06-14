@@ -13,6 +13,7 @@ from datetime import datetime
 from pathlib import Path
 import json
 import hashlib
+import fitz  # PyMuPDF，用于PDF文字提取
 
 # 导入文档文本提取模块
 import sys
@@ -676,7 +677,7 @@ class ReleaseUpdaterGUI:
             self.file_path_middle_var.set("volume1")
     
     def select_file_for_path(self):
-        """选择文件并提取文件名用于文件路径"""
+        """选择文件并提取文件名用于文件路径，同时计算文件大小和全文字数"""
         file_path = filedialog.askopenfilename(
             title="选择论文文件",
             filetypes=[
@@ -690,7 +691,27 @@ class ReleaseUpdaterGUI:
             filename = os.path.basename(file_path)
             self.file_path_filename_var.set(filename)
             self.update_full_file_path()
-            self.log(f"已选择文件: {filename}")
+            
+            # 计算文件大小
+            file_size = os.path.getsize(file_path)
+            self.selected_file_size = file_size
+            
+            # 显示文件大小（智能单位）
+            if file_size < 1024:
+                size_str = f"{file_size} B"
+            elif file_size < 1024 * 1024:
+                size_str = f"{file_size / 1024:.1f} KB"
+            else:
+                size_str = f"{file_size / (1024 * 1024):.1f} MB"
+            
+            # 提取PDF文字获得全文字数
+            try:
+                word_count = self.get_pdf_word_count(file_path)
+                self.selected_file_word_count = word_count
+                self.log(f"已选择文件: {filename}  |  大小: {size_str}  |  字数: {word_count}")
+            except Exception as e:
+                self.selected_file_word_count = 0
+                self.log(f"已选择文件: {filename}  |  大小: {size_str}  |  字数获取失败: {str(e)}")
     
     def update_full_file_path(self, *args):
         """更新完整的文件路径显示"""
@@ -702,6 +723,16 @@ class ReleaseUpdaterGUI:
             self.add_file_path_var.set(full_path)
         else:
             self.add_file_path_var.set("")
+    
+    def get_pdf_word_count(self, pdf_path: str) -> int:
+        """打开PDF并提取所有文字，返回总字符数"""
+        doc = fitz.open(pdf_path)
+        total_chars = 0
+        for page in doc:
+            text = page.get_text()
+            total_chars += len(text)
+        doc.close()
+        return total_chars
     
     def open_file_link(self):
         """在浏览器中打开文件链接"""
@@ -1277,7 +1308,8 @@ class ReleaseUpdaterGUI:
             "doc_category": self.doc_category_var.get(),  # 文献分类码
             "year": self.year_var.get(),  # 年份
             "index": index_value,  # 索引
-            "published": datetime.now().isoformat()  # 添加发布日期字段
+            "published": datetime.now().isoformat(),  # 添加发布日期字段
+            "size": [self.selected_file_size, self.selected_file_word_count]  # [文件大小(字节), 全文字数(字符)]
         }
         
         # 根据是否为会议论文添加不同的字段
@@ -1310,13 +1342,17 @@ class ReleaseUpdaterGUI:
         self.ICEST_index_var.set("")
         self.add_doi_var.set("")  # 清空 DOI 显示
         
-        # 清除解析缓存和生成的DOI
+        # 清除解析缓存、生成的DOI和文件size信息
         if hasattr(self, 'parsed_authors'):
             delattr(self, 'parsed_authors')
         if hasattr(self, 'parsed_keywords'):
             delattr(self, 'parsed_keywords')
         if hasattr(self, 'generated_doi'):
             delattr(self, 'generated_doi')
+        if hasattr(self, 'selected_file_size'):
+            delattr(self, 'selected_file_size')
+        if hasattr(self, 'selected_file_word_count'):
+            delattr(self, 'selected_file_word_count')
         
         # 如果是新建期刊期数，添加到下拉列表中
         if self.add_mode_var.get() == "new":

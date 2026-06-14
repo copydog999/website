@@ -175,16 +175,16 @@ function displayPaper(paper) {
     if (paper.doc_category) {
       let categoryText = '';
       switch(paper.doc_category) {
-        case 'R': categoryText = 'R（普通文章）'; break;
-        case 'N': categoryText = 'N（社论文章）'; break;
-        case 'D': categoryText = 'D（数据集）'; break;
-        case 'S': categoryText = 'S（源代码）'; break;
-        case 'M': categoryText = 'M（视听觉艺术作品）'; break;
-        case 'L': categoryText = 'L（前沿快讯）'; break;
-        case 'I': categoryText = 'I（产业报告）'; break;
+        case 'R': categoryText = '学术论文（Research Paper）'; break;
+        case 'N': categoryText = '新闻社论（News Editorial）'; break;
+        case 'D': categoryText = '数据集（Dataset）'; break;
+        case 'S': categoryText = '源代码（Source Code）'; break;
+        case 'M': categoryText = '多媒体作品（Multimedia）'; break;
+        case 'L': categoryText = '前沿快讯（Latest News）'; break;
+        case 'I': categoryText = '产业报告（Industry Report）'; break;
         default: categoryText = `${paper.doc_category}`;
       }
-      infoItems.push(`分类码：${categoryText}`);
+      infoItems.push(`文献分类：${categoryText}`);
     }
     
     // 版号显示
@@ -253,6 +253,13 @@ function displayPaper(paper) {
     downloadBtn.href = paper.filePath;
     downloadBtn.style.display = 'inline-block';
     
+    // 如果存在size信息，更新按钮文本显示文件大小
+    if (paper.size && Array.isArray(paper.size) && paper.size.length >= 1) {
+      const fileSize = paper.size[0];
+      const sizeText = formatFileSize(fileSize);
+      downloadBtn.textContent = `📄 下载PDF（${sizeText}）`;
+    }
+    
     // 构建标签HTML
     let badgesHtml = ' <span class="open-access-badge" style="margin-left: 10px; font-style: normal;">🔒Open Access</span>';
     if (paper.bestpaperaward === true) {
@@ -261,6 +268,21 @@ function displayPaper(paper) {
     
     // 在下载按钮后添加标识
     downloadBtn.insertAdjacentHTML('afterend', badgesHtml);
+  }
+  
+  // 显示全文字数
+  if (paper.size && Array.isArray(paper.size) && paper.size.length >= 2) {
+    const wordCount = paper.size[1];
+    const wordCountEl = document.getElementById('wordCount');
+    if (wordCountEl) {
+      wordCountEl.textContent = `${wordCount.toLocaleString()}字`;
+      wordCountEl.style.display = 'inline-block';
+    }
+  } else {
+    const wordCountEl = document.getElementById('wordCount');
+    if (wordCountEl) {
+      wordCountEl.style.display = 'none';
+    }
   }
     
   // 处理 exfile 和 exfann 属性
@@ -782,6 +804,19 @@ function getFileNameFromUrl(url) {
   }
   
   return fileName;
+}
+
+/**
+ * 格式化文件大小，自适应显示 B/KB/MB
+ */
+function formatFileSize(bytes) {
+  if (bytes < 1024) {
+    return `${bytes} B`;
+  } else if (bytes < 1024 * 1024) {
+    return `${(bytes / 1024).toFixed(1)} KB`;
+  } else {
+    return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+  }
 }
 
 // 显示未找到错误
