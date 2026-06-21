@@ -237,7 +237,7 @@ function displayPaper(paper) {
   } else {
     document.getElementById('keywords').textContent = '关键词: ' + paper.keywords;
   }
-  document.getElementById('abstract').textContent = paper.abstract;
+  document.getElementById('abstract').innerHTML = '<strong>摘要：</strong>' + paper.abstract;
   
   // 显示特殊注释（如果存在）
   if (paper.specialNote) {
@@ -287,6 +287,9 @@ function displayPaper(paper) {
     
   // 处理 exfile 和 exfann 属性
   handleExfile(paper.exfile, paper.exfann);
+  
+  // 处理参考文献
+  handleReferences(paper.references);
   
   // 显示内容，隐藏加载提示和错误信息
   document.getElementById('loading').style.display = 'none';
@@ -819,6 +822,104 @@ function formatFileSize(bytes) {
   }
 }
 
+/**
+ * 处理参考文献，解析 references 字符串并显示在侧边栏
+ */
+function handleReferences(referencesStr) {
+  const section = document.getElementById('referencesSection');
+  const list = document.getElementById('referencesList');
+  
+  // 如果没有参考文献，隐藏
+  if (!referencesStr || (typeof referencesStr === 'string' && referencesStr.trim() === '')) {
+    section.style.display = 'none';
+    return;
+  }
+  
+  // 显示
+  section.style.display = 'block';
+  
+  // 按换行符分割参考文献条目
+  const entries = referencesStr.split('\n').filter(line => line.trim() !== '');
+  
+  // 更新标题，显示参考文献总数
+  const heading = section.querySelector('.references-heading');
+  if (heading) {
+    heading.textContent = `参考文献（${entries.length}）`;
+  }
+  
+  // 将文本中的 URL 转换为超链接
+  function linkifyUrls(text) {
+    // 匹配 http:// 或 https:// 开头的 URL，直到遇到空格、逗号、句号、引号、括号或行尾
+    const urlRegex = /(https?:\/\/[^\s,，。、；;:：'"")》】］\]】】｝」』\u3000]+)/g;
+    return text.replace(urlRegex, function(url) {
+      // 去掉尾部可能的标点（句号、逗号、括号等）
+      const cleanUrl = url.replace(/[.,，。、;:：;]+$/, '');
+      return `<a href="${cleanUrl}" target="_blank" rel="noopener noreferrer">${cleanUrl}</a>`;
+    });
+  }
+
+  // 构建每个条目的 HTML
+  function buildEntryHtml(entry) {
+    const trimmed = entry.trim();
+    const match = trimmed.match(/^(\[[0-9]+\])\s*/);
+    if (match) {
+      const number = match[1];
+      const rest = trimmed.substring(match[0].length);
+      return `<div class="ref-entry"><span class="ref-number">${number}</span> ${linkifyUrls(rest)}</div>`;
+    } else {
+      return `<div class="ref-entry">${linkifyUrls(trimmed)}</div>`;
+    }
+  }
+  
+  let allHtml = '';
+  
+  // 懒加载：只显示前5条，超出部分用 toggle 控制
+  if (entries.length > 5) {
+    let visibleHtml = '';
+    let hiddenHtml = '';
+    entries.forEach((entry, index) => {
+      const entryHtml = buildEntryHtml(entry);
+      if (index < 5) {
+        visibleHtml += entryHtml;
+      } else {
+        hiddenHtml += entryHtml;
+      }
+    });
+    
+    allHtml = visibleHtml +
+      `<div id="refHidden" class="ref-hidden">${hiddenHtml}</div>` +
+      `<div class="ref-toggle">` +
+        `<a href="javascript:void(0)" id="refToggleBtn" class="ref-toggle-btn" onclick="toggleAllReferences()" title="展开全部参考文献">` +
+          `<span class="ref-toggle-icon">⏷</span> 展开全部（共${entries.length}条）` +
+        `</a>` +
+      `</div>`;
+  } else {
+    // 不超过5条，直接全部显示
+    entries.forEach(entry => {
+      allHtml += buildEntryHtml(entry);
+    });
+  }
+  
+  list.innerHTML = allHtml;
+}
+
+/**
+ * 切换显示全部参考文献
+ */
+function toggleAllReferences() {
+  const hidden = document.getElementById('refHidden');
+  const btn = document.getElementById('refToggleBtn');
+  
+  if (hidden.style.display === 'block') {
+    hidden.style.display = 'none';
+    const total = hidden.querySelectorAll('.ref-entry').length + 5;
+    btn.innerHTML = '<span class="ref-toggle-icon">⏷</span> 展开全部（共' + total + '条）';
+  } else {
+    hidden.style.display = 'block';
+    btn.innerHTML = '<span class="ref-toggle-icon">⏶</span> 收起';
+  }
+}
+
 // 显示未找到错误
 function showNotFoundError() {
   document.getElementById('loading').style.display = 'none';
@@ -869,11 +970,17 @@ function performSimpleSearch() {
     // 清除URL参数
     window.history.pushState({}, '', 'nowbase.html');
   } else {
-    // 按标题模糊匹配
+    // 按标题和关键词模糊匹配
     const searchLower = searchTerm.toLowerCase();
     filteredPapersData = allPapersData.filter(paper => {
       const title = paper.title ? paper.title.toLowerCase() : '';
-      return title.includes(searchLower);
+      let keywordMatch = false;
+      if (Array.isArray(paper.keywords)) {
+        keywordMatch = paper.keywords.some(k => k.toLowerCase().includes(searchLower));
+      } else if (paper.keywords) {
+        keywordMatch = paper.keywords.toLowerCase().includes(searchLower);
+      }
+      return title.includes(searchLower) || keywordMatch;
     });
     displayPapersTable(filteredPapersData);
     
@@ -947,7 +1054,7 @@ function checkAndExecuteSearchFromURL() {
   
   // 获取关键词参数（支持keywords，用分号分隔）
   let advKeywords = [];
-  const keywordsParam = getParameterByName('keywords');
+  const keywordsParam = getParameterByName('keywords') || getParameterByName('keyword1');
   if (keywordsParam) {
     advKeywords = keywordsParam.split(/[;；]/).map(k => k.trim()).filter(k => k);
   }
@@ -998,7 +1105,14 @@ function executeSimpleSearchFromParams(searchTerm) {
     const searchLower = searchTerm.toLowerCase();
     filteredPapersData = allPapersData.filter(paper => {
       const title = paper.title ? paper.title.toLowerCase() : '';
-      return title.includes(searchLower);
+      // 同时搜索标题和关键词
+      let keywordMatch = false;
+      if (Array.isArray(paper.keywords)) {
+        keywordMatch = paper.keywords.some(k => k.toLowerCase().includes(searchLower));
+      } else if (paper.keywords) {
+        keywordMatch = paper.keywords.toLowerCase().includes(searchLower);
+      }
+      return title.includes(searchLower) || keywordMatch;
     });
   }
   displayPapersTable(filteredPapersData);

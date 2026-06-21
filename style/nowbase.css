@@ -576,6 +576,72 @@ footer a {
   font-weight: bold;
 }
 
+/* ========== 参考文献（IEEE风格） ========== */
+.references-section {
+  margin-top: 35px;
+  padding-top: 20px;
+}
+
+.references-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003C6B;
+  margin: 0 0 18px 0;
+}
+
+.references-list {
+  font-size: 12pt;
+  line-height: 1.7;
+  font-family: Arial, 'Microsoft YaHei', sans-serif;
+}
+
+.ref-entry {
+  margin-bottom: 10px;
+  padding-left: 40px;
+  text-indent: -40px;
+  word-break: break-word;
+}
+
+.ref-number {
+  font-weight: bold;
+  color: #333;
+  margin-right: 2px;
+}
+
+.ref-hidden {
+  display: none;
+}
+
+.ref-toggle {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.ref-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 10pt;
+  font-family: Arial, 'Microsoft YaHei', sans-serif;
+  cursor: pointer;
+  padding: 4px 16px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.ref-toggle-btn:hover {
+  background-color: #e8f0fe;
+  text-decoration: none;
+}
+
+.ref-toggle-icon {
+  font-size: 12pt;
+  line-height: 1;
+}
+
 /* 移动端响应式 */
 @media (max-width: 768px) {
   .citation-box {
